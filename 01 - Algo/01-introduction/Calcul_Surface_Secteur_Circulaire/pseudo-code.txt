@@ -1,0 +1,35 @@
+﻿Lire le rayon R d’un cercle et un angle A (en degré(s)).
+
+Calculer et afficher :
+
+L’ aire du secteur circulaire = (π R² A) / 360
+
+VARIABLES 
+
+angle est un entier 
+rayon est un entier 
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de calcul de la surface d'un secteur circulaire" 
+
+	ECRIRE "Veuillez saisir le rayon du cercle en cm" 
+
+	LIRE rayon
+
+	ECRIRE "Veuillez saisir l'angle du cercle en degré" 
+
+	ECRIRE "L'aire du secteur circulaire est " , aire , " cm2 "."
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

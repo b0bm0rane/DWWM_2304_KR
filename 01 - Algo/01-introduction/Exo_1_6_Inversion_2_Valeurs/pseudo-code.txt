@@ -1,0 +1,40 @@
+﻿Lire 2 nombres entier A et B.
+Afficher la valeur de A puis la valeur de B.
+Mettre le contenu de A dans B et celui de B dans A.
+Afficher à nouveau la valeur de A puis la valeur de B.
+
+VARIABLES 
+
+a est un entier 
+b est un entier 
+temp est un entier 
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme d'inversion de 2 valeurs" 
+
+	ECRIRE "Veuillez saisir le nombre a" 
+
+	LIRE a
+
+	ECRIRE "Veuillez saisir le nombre b" 
+
+	LIRE b
+
+	ECRIRE "Le nombre a = " , a , ". Le nombre b = " , b , "."
+
+	temp <-- a 
+	a <-- b 
+	b <-- temp
+
+	ECRIRE "Le nombre a = " , a , ". Le nombre b = " , b , "."
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
