@@ -1,0 +1,37 @@
+﻿Lire le rayon R d’une sphère puis calculer et afficher :
+
+Son aire = 4 π R²
+Son volume = 4/3 π R³
+
+VARIABLES 
+
+aire est un entier 
+volume est un réel 
+rayon est un entier 
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de calcul de l'aire et du volume d'une sphère" 
+
+	ECRIRE "Veuillez saisir le rayon de la sphère" 
+
+	LIRE rayon
+
+	aire <--  4 π R²
+
+	volume <-- 4/3 π R³
+
+	ECRIRE "L'aire de la sphère est " , aire , " et son volume est " , volume , "."
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
