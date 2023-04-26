@@ -1,0 +1,109 @@
+﻿Réalisez l’algorithme et le programme correspondant au texte ci-dessous :
+
+S’il fait beau demain, j’irai faire une balade à bicyclette.
+
+Je n’ai pas utilisé ma bicyclette depuis plusieurs mois, peut-être n’est-elle plus en parfait état de fonctionnement.
+
+Si c’est le cas, je passerai chez le garagiste avant la balade. J’espère que les réparations seront immédiates sinon je devrai renoncer à la balade en bicyclette. Comme je veux de toute façon profiter du beau temps, si mon vélo n’est pas utilisable, j’irai à pied jusqu’à l’étang pour cueillir les joncs.
+
+S’il ne fait pas beau, je consacrerai ma journée à la lecture. J’aimerais relire le 1er tome de Game of Thrones. Je pense posséder ce livre, il doit être dans la bibliothèque du salon.
+
+Si je ne le retrouve pas, j’irai l’emprunter à la bibliothèque municipale. Si le livre n’est pas disponible, j’emprunterai un roman policier.
+
+Je rentrerai ensuite directement à la maison.
+
+Dès que j’aurai le livre qui me convient, je m’installerai confortablement dans un fauteuil et je me plongerai dans la lecture.
+
+
+
+VARIABLES 
+
+beauTemps est un booléen
+etatBicyclette est un booléen
+réparationsImmédiates est un booléen
+gotSalon est un booléen
+gotBibliothèque est un booléen
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de ma bicyclette"
+
+	ECRIRE "Fait-il beau ?"
+
+	LIRE beauTemps
+
+	SI beauTemps 
+
+		ECRIRE "Je vais me promener"
+		
+		ECRIRE "etatBicyclette ?"
+
+		LIRE etatBicyclette
+
+		SI etatBicyclette 
+
+			ECRIRE "Balade en bicyclette"
+
+		SINON 
+
+			ECRIRE "Réparations au garage"
+
+			ECRIRE "Réparations immédiates ?"
+
+			LIRE reparationsImmediates
+
+			SI reparationsImmediates
+
+				ECRIRE "Balade en bicyclette"
+
+			SINON 
+
+				ECRIRE "Balade à pieds"
+
+			FIN SI
+		
+		FIN SI
+
+	SINON
+
+		ECRIRE "Je vais lire"
+
+		ECRIRE "GOT bibliothèque du salon ?"
+
+		LIRE gotSalon
+
+		SI gotSalon
+
+			ECRIRE "Lecture de GOT dans le fauteuil"
+
+		SINON
+
+			ECRIRE "Je vais à la bibliothèque municipale"
+
+			ECRIRE "gotBibliothèque"
+
+			LIRE gotBibliothèque
+
+			SI gotBibliothèque
+
+				ECRIRE "Lecture de GOT dans le fauteuil"
+
+			SINON
+
+				ECRIRE "Lecture d'un roman policier dans le fauteuil"
+
+			FIN SI
+
+		FIN SI
+	
+	FIN SI
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

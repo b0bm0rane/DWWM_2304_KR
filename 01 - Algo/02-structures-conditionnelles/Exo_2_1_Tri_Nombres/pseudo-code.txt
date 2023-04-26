@@ -1,0 +1,42 @@
+﻿Lire 2 nombres entier A et B puis les afficher dans l’ordre croissant.
+
+
+
+VARIABLES 
+
+a est un entier
+b est un entier
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de tri de 2 nombres par ordre croissant"
+
+	ECRIRE "Veuillez saisir le 1er nombre"
+
+	LIRE a
+
+	ECRIRE "Veuillez saisir le 2nd nombre"
+
+	LIRE b
+
+	SI a < b 
+
+		ECRIRE a , " < " , b
+
+	SINON SI a > b
+
+		ECRIRE b , " < " , a
+
+	SINON
+
+		ECRIRE a , " = " , b
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

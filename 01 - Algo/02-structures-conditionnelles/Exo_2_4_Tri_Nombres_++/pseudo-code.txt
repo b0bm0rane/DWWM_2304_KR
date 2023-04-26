@@ -1,0 +1,61 @@
+﻿Lire 3 nombres entier A, B et C puis les afficher dans l’ordre décroissant.
+
+
+
+VARIABLES 
+
+a est un entier
+b est un entier
+c est un entier
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de tri de 3 nombres par ordre décroissant"
+
+	ECRIRE "Veuillez saisir le 1er nombre"
+
+	LIRE a
+
+	ECRIRE "Veuillez saisir le 2nd nombre"
+
+	LIRE b
+
+	ECRIRE "Veuillez saisir le 3ème nombre"
+
+	LIRE c
+
+	SI a > b > c 
+
+		ECRIRE a , " > " , b , " > " , c
+
+	SINON SI a > c > b 
+
+		ECRIRE a , " > " , c , " > " , b
+
+	SINON SI b > a > c 
+
+		ECRIRE b , " > " , a , " > " , c
+
+	SINON SI b > c > a 
+
+		ECRIRE b , " > " , c , " > " , a
+
+	SINON SI c > a > b 
+
+		ECRIRE c , " > " , a , " > " , b
+
+	SINON SI c > b > a 
+
+		ECRIRE c , " > " , b , " > " , a
+
+	
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
