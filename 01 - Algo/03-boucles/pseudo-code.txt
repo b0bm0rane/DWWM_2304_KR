@@ -8,7 +8,7 @@ VARIABLES
 
 TRAITEMENT 
 
-	ECRIRE 
+	ECRIRE "Bienvenue dans le programme "
 
 	LIRE 
 

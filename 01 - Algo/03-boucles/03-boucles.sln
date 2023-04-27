@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 		pseudo-code.txt = pseudo-code.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo_3_2_Controle_Saisie_Limite", "Exo_3_1_Controle_Saisie_Limite\Exo_3_2_Controle_Saisie_Limite.csproj", "{AFF4302F-48DD-4F62-8726-B89CC10CDA64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo_3_3_Intervalle_2_Nombres", "Exo_3_3_Intervalle_2_Nombres\Exo_3_3_Intervalle_2_Nombres.csproj", "{C707E416-950C-4F24-9946-EF86B18FD1DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{381C850F-FC3D-4FB4-A97F-CE2FAFD936C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{381C850F-FC3D-4FB4-A97F-CE2FAFD936C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{381C850F-FC3D-4FB4-A97F-CE2FAFD936C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF4302F-48DD-4F62-8726-B89CC10CDA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF4302F-48DD-4F62-8726-B89CC10CDA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF4302F-48DD-4F62-8726-B89CC10CDA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF4302F-48DD-4F62-8726-B89CC10CDA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C707E416-950C-4F24-9946-EF86B18FD1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C707E416-950C-4F24-9946-EF86B18FD1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C707E416-950C-4F24-9946-EF86B18FD1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C707E416-950C-4F24-9946-EF86B18FD1DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

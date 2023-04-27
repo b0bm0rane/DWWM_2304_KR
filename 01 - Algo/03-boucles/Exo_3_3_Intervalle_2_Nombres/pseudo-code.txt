@@ -1,0 +1,37 @@
+﻿Lire 2 nombres entier A et B puis afficher tous les nombres entier dans l’intervalle.
+
+
+
+VARIABLES 
+
+a est un entier
+b est un entier
+i est un entier
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme d'intervalle entre 2 nombres"
+
+	ECRIRE "Saisissez le premier nombre"
+
+	LIRE a
+
+	ECRIRE "Saisissez le second nombre"
+
+	LIRE b
+
+	POUR 
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

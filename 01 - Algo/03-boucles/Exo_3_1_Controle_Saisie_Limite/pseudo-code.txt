@@ -1,0 +1,72 @@
+﻿L’utilisateur est invité à saisir un mot de passe.
+
+Si le mot de passe saisi est correct, le programme affiche “Vous êtes connecté”.
+
+Dans le cas contraire, l’utilisateur doit recommencer la saisie.
+
+L’utilisateur dispose de 3 essais maximum.
+
+Au 3ème échec, le programme affiche “Votre compte est bloqué” et se termine.
+
+Note : Le bon mot de passe est formation
+
+
+
+VARIABLES 
+
+saisie est une chaine de caractères
+essais est un entier
+estConnecte est un booléen
+
+CONSTANTES
+
+mdp = formation est une chaine de caractères
+
+TRAITEMENT
+
+	essais <-- 1
+
+	estConnecte <-- FAUX
+
+	ECRIRE "Bienvenue dans le programme de saisie limite"
+
+	TANT QUE essais <= 3 et !estConnecte
+	
+		ECRIRE "Veuillez saisir votre mot de passe"
+
+		LIRE saisie
+
+		SI saisie = mdp
+
+			estConnecte <-- VRAI
+
+		SINON
+		
+			essais = essais +1
+
+		FIN SI
+
+	FIN TANT QUE
+
+	SI estConnecte
+
+		Ecrire "Vous êtes connecté"
+
+	SINON
+
+		Ecrire "Votre compte est bloqué"
+
+	FIN SI
+
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
