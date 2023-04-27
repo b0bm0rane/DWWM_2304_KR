@@ -20,11 +20,15 @@ TRAITEMENT
 
 	ECRIRE "Bienvenue dans le programme de contrôle de saisie"
 
-	ECRIRE "Veuillez saisir votre prénom"
+	FAIRE
 
-	LIRE prenom
+		ECRIRE "Veuillez saisir votre prénom (2 caractères minimum)"
 
+		LIRE prenom
 
+	TANT QUE prenom < 2 caractères
+
+	ECRIRE "Bonjour " , prenom
 
 
 
