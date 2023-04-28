@@ -1,0 +1,46 @@
+﻿Lire un nombre N et déterminer s’il est un nombre premier.
+
+Un nombre premier n’est divisible que par 1 et par lui-même.
+
+
+
+VARIABLES 
+
+a est un entier
+d est un entier
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de détection d'un nombre entier"
+
+	ECRIRE "Saisissez un nombre entier"
+
+	LIRE a
+
+	POUR d = 2 allant à a - 1 en avançant de 1
+
+		SI a % d = 0 
+
+			ECRIRE a , "n'est pas un nombre premier"
+
+		SINON 
+
+			ECRIRE a , "est un nombre premier"
+
+		FIN SI
+
+	FIN POUR
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

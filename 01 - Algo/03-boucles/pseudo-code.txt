@@ -10,6 +10,8 @@ TRAITEMENT
 
 	ECRIRE "Bienvenue dans le programme "
 
+	ECRIRE 
+
 	LIRE 
 
 

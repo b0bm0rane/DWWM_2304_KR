@@ -22,9 +22,17 @@ TRAITEMENT
 
 	LIRE b
 
-	POUR 
+	SI a < b
 
+		POUR i allant de a + 1 jusqu'à b - 1 avec un pas de 1
 
+			ECRIRE i
+
+	SINON 
+
+		POUR i allant de a - 1 jusqu'à b + 1 avec un pas de - 1
+
+			ECRIRE i
 
 FIN TRAITEMENT 
 

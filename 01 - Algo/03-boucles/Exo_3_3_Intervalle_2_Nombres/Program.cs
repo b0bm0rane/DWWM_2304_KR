@@ -18,9 +18,28 @@
 
             b = int.Parse(Console.ReadLine());
 
-            for (i = a + 1; i < b; i++)
+            if (a < b) 
+            { 
+
+                for (i = a + 1 ; i <= b - 1; i++)
+                {
+
+                    Console.WriteLine(i);
+                
+                }
+
+            }
+
+            else
             {
-                Console.WriteLine(i);
+
+                for (i = a - 1 ; i >= b + 1 ; i--)
+                {
+
+                    Console.WriteLine(i);
+
+                }
+
             }
 
         }
