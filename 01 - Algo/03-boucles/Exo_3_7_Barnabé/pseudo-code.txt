@@ -1,0 +1,35 @@
+﻿Barnabé fait ses courses dans plusieurs magasins.
+
+Dans chacun, il dépense 1 € de plus que la moitié de ce qu’il possédait en entrant.
+
+Dans le dernier magasin, il dépense le solde.
+
+Barnabé dépense au moins 1 € dans chaque magasin.
+
+Représenter l’algorithme permettant de trouver le nombre de magasins dans lesquels il a acheté.
+
+
+
+VARIABLES 
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de Barnabé fait ses courses"
+
+	ECRIRE 
+
+	LIRE 
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

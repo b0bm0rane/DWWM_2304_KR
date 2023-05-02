@@ -1,0 +1,62 @@
+﻿L’ordinateur « choisit » aléatoirement un nombre mystère (entier compris entre 0 et 100).
+Le joueur essaie de le deviner.
+Lors de chaque essai, l’ordinateur affiche la « fourchette » dans laquelle se trouve le nombre qu’il a choisi.
+
+Le choix du nombre mystère sera simulé par génération d’un nombre aléatoire : N <-- RANDOM(0,100).
+
+Lorsque l’utilisateur a trouvé le nombre mystère, le programme affiche :
+
+Bravo vous avez trouvé en X essais.
+
+
+
+VARIABLES 
+
+a est un entier
+mystère est un entier
+essais est un entier
+fMin est un entier
+fMax est un entier
+trouvé est un booléen
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme du jeu de la fourchette"
+
+	essais = 0
+
+	ECRIRE "Saisissez un nombre entier entre 0 et 100"
+
+	TANT QUE !trouvé
+	
+		LIRE a
+		
+		essais <-- essais + 1
+
+		SI a = mystère
+
+			trouvé <-- vrai
+
+		SINON SI a < mystere 
+	
+			fMax <-- a
+
+		SINON
+
+			fMin <-- a
+
+		FIN SI
+
+	FIN TANT QUE
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

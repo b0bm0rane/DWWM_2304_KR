@@ -8,6 +8,7 @@ VARIABLES
 
 a est un entier
 d est un entier
+estPremier est un booléen
 
 
 
@@ -23,17 +24,23 @@ TRAITEMENT
 
 		SI a % d = 0 
 
-			ECRIRE a , "n'est pas un nombre premier"
-
-		SINON 
-
-			ECRIRE a , "est un nombre premier"
+			estPremier <-- faux
 
 		FIN SI
 
 	FIN POUR
 
+	SI estPremier = faux
 
+		ECRIRE a , " n'est pas un nombre premier"
+
+	SINON 
+
+		ECRIRE a , " est un nombre premier"
+
+	FIN SI
+
+	
 
 FIN TRAITEMENT 
 
