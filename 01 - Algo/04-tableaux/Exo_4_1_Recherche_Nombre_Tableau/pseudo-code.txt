@@ -1,0 +1,33 @@
+﻿Soit un tableau de nombres entier triés par ordre croissant.
+
+Exemple: [8, 16, 32, 64, 128, 256, 512]
+
+Chercher si un nombre donné N figure parmi les éléments.
+
+Si oui, afficher la valeur de l’indice correspondant. Sinon, afficher « Nombre non trouvé ».
+
+
+
+VARIABLES 
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de recherche d'un nombre dans un tableau"
+
+	ECRIRE 
+
+	LIRE 
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
