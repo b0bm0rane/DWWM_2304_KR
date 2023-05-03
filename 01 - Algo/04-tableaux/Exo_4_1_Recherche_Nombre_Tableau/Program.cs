@@ -16,7 +16,7 @@
             if (tab.Contains(a))
             {
 
-                Console.WriteLine(a + " est dans le tableau");
+                Console.WriteLine(a + " est dans le tableau avec l'indice " + Array.IndexOf(tab, a));
 
             }
 
@@ -26,6 +26,7 @@
                 Console.WriteLine("Nombre non trouvé");
 
             }
+
         }
     }
 }

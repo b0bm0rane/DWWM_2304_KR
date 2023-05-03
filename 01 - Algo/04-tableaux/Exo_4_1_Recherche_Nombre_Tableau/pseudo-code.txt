@@ -10,15 +10,27 @@ Si oui, afficher la valeur de l’indice correspondant. Sinon, afficher « Nombr
 
 VARIABLES 
 
+tab est un tableau
+a est un nombre entier
 
 
 TRAITEMENT 
 
 	ECRIRE "Bienvenue dans le programme de recherche d'un nombre dans un tableau"
 
-	ECRIRE 
+	ECRIRE "Saississez un nombre"
 
-	LIRE 
+	LIRE a
+
+	SI a est dans le tableau
+
+		ECRIRE a , " est dans le tableau"
+
+	SINON
+
+		ECRIRE "Nombre non trouvé"
+
+	FIN SI
 
 
 

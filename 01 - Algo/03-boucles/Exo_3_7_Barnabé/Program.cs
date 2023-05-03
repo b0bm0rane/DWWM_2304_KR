@@ -16,20 +16,34 @@
             magasins = 0;
             pauvre = false;
 
-            while (!pauvre)
+            if (argent > 1)
             {
 
-                argent = (argent / 2) - 1;
-                magasins++;
+                Console.WriteLine("Barnabé possède " + argent + " euros sur lui");
 
-                if (argent <= 0)
+                while (!pauvre)
                 {
 
-                    pauvre = true;
+                    argent = (argent / 2) - 1;
+                    magasins++;
 
-                    Console.WriteLine("Barnabé a dépensé son argent dans " + magasins + " magasins");
+                    if (argent <= 0)
+                    {
+
+                        pauvre = true;
+
+                        Console.WriteLine("Barnabé a dépensé son argent dans " + magasins + " magasins");
+
+                    }
 
                 }
+
+            }
+
+            else
+            {
+
+                Console.WriteLine("La somme d'argent n'est pas supérieur à 1");
 
             }
 
