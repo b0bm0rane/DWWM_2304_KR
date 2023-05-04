@@ -13,16 +13,50 @@ La lettre est présente une ou plusieurs fois
 
 
 VARIABLES 
-
+lettre est un caractère
+phrase est une chaine de charactère
+indice est un entier
+occurences est un entier
 
 
 TRAITEMENT 
 
 	ECRIRE "Bienvenue dans le programme de recherche d'une lettre dans une phrase"
 
-	ECRIRE 
+	phrase <-- "J'ai un chat."
 
-	LIRE 
+	ECRIRE "Saissez une lettre"
+
+	LIRE lettre
+
+	indice <-- 0
+	occurences <-- 0
+
+	SI phrase = "" ou phrase = "."
+
+		ECRIRE "La chaine est vide"
+
+	SINON
+
+		POUR indice = 0 allant à indice < | phrase | en avançant de 1
+
+			SI phrase[indice] = lettre
+
+				occurences = occurences + 1
+
+		FIN POUR
+
+	FIN SI
+
+	SI occurences > 0 
+
+		ECRIRE "La lettre " , lettre , " est présente " , occurences , " fois dans la phrase"
+
+	SINON
+
+		ECRIRE "La lettre " , lettre , " n'est pas présente"
+
+	FIN SI
 
 
 

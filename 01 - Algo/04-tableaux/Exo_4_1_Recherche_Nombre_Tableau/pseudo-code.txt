@@ -10,8 +10,10 @@ Si oui, afficher la valeur de l’indice correspondant. Sinon, afficher « Nombr
 
 VARIABLES 
 
-tab est un tableau
-a est un nombre entier
+tableau est un tableau
+indice est un entier
+nombreATrouver est un entier
+aTrouve est un booleen
 
 
 TRAITEMENT 
@@ -20,15 +22,32 @@ TRAITEMENT
 
 	ECRIRE "Saississez un nombre"
 
-	LIRE a
+	LIRE nombreATrouver
 
-	SI a est dans le tableau
+	indice <-- 0
+	nombreATrouver <-- faux
 
-		ECRIRE a , " est dans le tableau"
+	TANT QUE non aTrouve et indice < |tableau|
+
+		SI tableau [indice] = nombreATrouver
+
+			aTrouve <-- vrai
+
+		SINON
+
+			indice <-- indice + 1
+
+		FIN SI
+
+	FIN TANT QUE
+
+	SI aTrouve
+
+		ECRIRE "L'indice est " , indice
 
 	SINON
 
-		ECRIRE "Nombre non trouvé"
+		ECRIRE "Non trouvé"
 
 	FIN SI
 
