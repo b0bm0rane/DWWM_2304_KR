@@ -1,0 +1,55 @@
+﻿Nous désignerons par a1, a2, …, aN les éléments d’un tableau à trier par ordre croissant.
+
+Exemple: [128, 64, 8, 512, 16, 32, 256]
+
+On commence par chercher l’indice du plus petit des éléments, soit j cet indice.
+
+On permute alors les valeurs de a1 (128) et aj (8).
+
+Le tableau devient [8, 64, 128, 512, 16, 32, 256].
+
+On cherche ensuite l’indice du plus petit des éléments entre a2 et aN et on permute avec a2.
+
+Le tableau devient [8, 16, 128, 512, 64, 32, 256].
+
+On cherche ensuite l’indice du plus petit des éléments a3, a4, …, aN etc…
+
+
+
+VARIABLES 
+
+tableau est un tableau
+indiceA est un entier
+indiceB est un entier
+temp est un entier
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de tri d'un tableau"
+
+	ECRIRE 
+
+	LIRE 
+
+	POUR indiceA allant de 0 à | tableau | en avançant de 1
+
+		POUR indiceB allant de 0 à | tableau | en avançant de 1
+
+			SI indiceA | tableau | > indiceB | tableau |
+
+				temp <-- indiceB | tableau |
+				indiceB | tableau | <-- indiceA | tableau |
+				indiceA | tableau | <-- temp
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
