@@ -1,0 +1,64 @@
+﻿Lire un texte d’au moins 120 caractères (à contrôler).
+
+Compter et afficher le nombre d’occurrences (d’apparitions) de chacune des lettres de l’alphabet.
+
+
+
+VARIABLES 
+texte est une chaine de caractère
+alphabet est une chaine de caractères
+indiceT est un entier
+indiceA est un entier
+occurences est un entier
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme de dénombrage des lettres de l'alphabet dans un tableau"
+
+	alphabet <-- "abcdefghijklmnopqrstuvwxyz"
+	indiceT <-- 0
+	indiceA <-- 0
+
+	FAIRE
+
+		ECRIRE "Saisissez un texte de minimum 120 caractères"
+
+		LIRE texte
+
+	RÉPÉTER TANT QUE | texte | < 120
+
+	POUR indiceA allant de 0 à | alphabet | en avançant de 1		// Pour chaque lettre de l'alphabet
+
+		occurences <-- 0											// On compte à partir de 0
+
+		POUR indiceT allant de 0 à | texte | en avançant de 1		// Pour chaque lettre du texte
+
+			SI alphabet[indiceA] = texte[indiceT]					// On vérifie que la lettre du texte est la lettre de l'alphabet choisie
+
+				occurences <-- occurences + 1						// On ajoute 1 au compteur
+	
+			FIN SI
+
+		FIN POUR
+
+		ECRIRE "La lettre " , indiceA , " est présente " , occurences , " fois"
+
+	FIN POUR
+
+
+
+	
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
