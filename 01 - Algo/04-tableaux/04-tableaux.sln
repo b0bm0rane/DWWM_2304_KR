@@ -14,7 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex_4_2_Recherche_Lettre_Dan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exo_4_3_Nombre_Lettres_Alphabet_Tableau", "Exo_4_3_Nombre_Lettres_Alphabet_Tableau\Exo_4_3_Nombre_Lettres_Alphabet_Tableau.csproj", "{8F710B5F-74FD-4805-B37C-3A94B74F338E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo_4_4_Tri_Tableau", "Exo_4_4_Tri_Tableau\Exo_4_4_Tri_Tableau.csproj", "{01BF61B0-312D-4E32-8BF7-92525FEA2B38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exo_4_4_Tri_Tableau", "Exo_4_4_Tri_Tableau\Exo_4_4_Tri_Tableau.csproj", "{01BF61B0-312D-4E32-8BF7-92525FEA2B38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo_4_5_Palindrome", "Exo_4_5_Palindrome\Exo_4_5_Palindrome.csproj", "{2111D6B9-B3D9-46B8-B6CD-397A15C6E718}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{01BF61B0-312D-4E32-8BF7-92525FEA2B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01BF61B0-312D-4E32-8BF7-92525FEA2B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01BF61B0-312D-4E32-8BF7-92525FEA2B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2111D6B9-B3D9-46B8-B6CD-397A15C6E718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2111D6B9-B3D9-46B8-B6CD-397A15C6E718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2111D6B9-B3D9-46B8-B6CD-397A15C6E718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2111D6B9-B3D9-46B8-B6CD-397A15C6E718}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

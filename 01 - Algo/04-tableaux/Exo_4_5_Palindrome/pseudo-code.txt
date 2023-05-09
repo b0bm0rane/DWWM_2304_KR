@@ -1,0 +1,65 @@
+﻿Un palindrome est une chaîne de caractères que l’on peut lire identiquement de droite à gauche, et gauche à droite.
+
+Par exemple:
+
+AA
+38783
+LAVAL
+LAVAL A ETE A LAVAL
+ET LA MARINE VA VENIR A MALTE
+L’utilisateur saisit une chaîne de caractères terminée par un point . (à contrôler).
+
+Ecrivez l’algorithme et le programme permettant d’affirmer si cette phrase est ou non un palindrome.
+
+Si la chaîne de caractères n’est composée que du caractère ‘.’, l’utilisateur est invité à recommencer.
+
+L’algorithme doit prévoir les 3 cas suivants :
+
+la phrase est vide
+la chaîne de caractères n’est pas un palindrome
+la chaîne de caractères est un palindrome
+
+
+
+VARIABLES 
+
+texte est une chaine de caractere
+indiceA est un entier
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme du palindrome"
+
+	ECRIRE "Saisissez du texte"
+
+	LIRE texte
+
+	TANT QUE indiceA < | texte | - 1 - indiceA
+
+		indiceA = indiceA + 1
+
+	FIN TANT QUE
+
+	SI indiceA = | texte | - 1 - indiceA
+
+		ECRIRE "Le texte est un palindrome"
+
+	SINON
+
+		ECRIRE "Le texte n'est pas un palindrome"
+
+	FIN SI
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

@@ -36,11 +36,11 @@ TRAITEMENT
 
 		POUR indiceB allant de 0 à | tableau | en avançant de 1
 
-			SI indiceA | tableau | > indiceB | tableau |
+			TANT QUE tableau [indiceA] > tableau [indiceB]
 
-				temp <-- indiceB | tableau |
-				indiceB | tableau | <-- indiceA | tableau |
-				indiceA | tableau | <-- temp
+				temp <-- tableau [indiceB]
+				tableau [indiceB] <-- tableau [indiceA]
+				tableau [indiceA] <-- temp
 
 
 
