@@ -11,14 +11,14 @@ namespace Exo_4_3_Nombre_Lettres_Alphabet_Tableau
             string alphabet;
             int indiceT;
             int indiceA;
-            int occurences;
+     
 
             Console.WriteLine("Bienvenue dans le programme de dénombrage des lettres de l'alphabet dans un tableau");
 
             alphabet = "abcdefghijklmnopqrstuvwxyz";
             indiceT = 0;
             indiceA = 0;
-            occurences = 0;
+   
 
             do
             {
@@ -33,15 +33,16 @@ namespace Exo_4_3_Nombre_Lettres_Alphabet_Tableau
 
             for (indiceA = 0 ; indiceA < alphabet.Length ; indiceA++)
             {
-
-                occurences = 0;
+                int occurences=0;
+  
 
                 for (indiceT = 0 ; indiceT < texte.Length ; indiceT++)
                 {
 
                     if (alphabet[indiceA] == texte[indiceT])
-
-                            occurences++;
+                    {
+                        occurences++;
+                    }
 
                 }
 

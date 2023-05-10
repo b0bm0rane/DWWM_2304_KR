@@ -28,7 +28,6 @@ namespace Ex_4_2_Recherche_Lettre_Dans_Une_Phrase
                 Console.WriteLine("La chaine est vide");
 
             }
-
             else
             {
 
@@ -49,7 +48,6 @@ namespace Ex_4_2_Recherche_Lettre_Dans_Une_Phrase
                     Console.WriteLine("La lettre " + lettre + " est présente " + occurences + " fois dans la phrase");
 
                 }
-
                 else
                 {
 

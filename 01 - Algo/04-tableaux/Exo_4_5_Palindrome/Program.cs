@@ -15,20 +15,20 @@
 
             indiceA = 0;
 
-            while (indiceA < (texte.Length - 1 - indiceA))
+            while ((indiceA < (texte.Length - 1 - indiceA)) && (texte[indiceA] == texte[texte.Length - 1 - indiceA]))
             {
 
                 indiceA++;
 
             }
 
-            if (indiceA > (texte.Length - 1 - indiceA))
+            if (indiceA >= (texte.Length - 1 - indiceA))
             {
 
+                
                 Console.WriteLine("Le texte est un palindrome");
 
             }
-
             else
             {
 
