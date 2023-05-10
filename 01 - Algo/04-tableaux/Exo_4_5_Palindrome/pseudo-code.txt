@@ -36,13 +36,15 @@ TRAITEMENT
 
 	LIRE texte
 
-	TANT QUE indiceA < | texte | - 1 - indiceA
+	indiceA <-- 0
 
-		indiceA = indiceA + 1
+	TANT QUE indiceA < | texte | - 1 - indiceA et texte[indiceA] = texte[| texte | - 1 - indiceA]
+
+		indiceA <-- indiceA + 1
 
 	FIN TANT QUE
 
-	SI indiceA = | texte | - 1 - indiceA
+	SI indiceA >= | texte | - 1 - indiceA
 
 		ECRIRE "Le texte est un palindrome"
 

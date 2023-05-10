@@ -10,8 +10,12 @@
 
             Console.WriteLine("Bienvenue dans le programme de tri d'un tableau");
 
-            Console.WriteLine(tableau[0] + ", " + tableau[1] + ", " + tableau[2] + ", " + tableau[3] + ", " + tableau[4] + ", " + tableau[5] + ", " + tableau[6]);
+            for (int i = 0; i < tableau.Length; i++)
+            {
 
+                Console.Write(tableau[i] + ", ");
+
+            }
 
             for (int indiceA = 0; indiceA < tableau.Length; indiceA++)
             {
@@ -36,7 +40,14 @@
 
             }
 
-            Console.WriteLine(tableau[0] + ", " + tableau[1] + ", " + tableau[2] + ", " + tableau[3] + ", " + tableau[4] + ", " + tableau[5] + ", " + tableau[6]);
+            Console.WriteLine();
+
+            for (int i = 0; i < tableau.Length; i++)
+            {
+
+                Console.Write(tableau[i] + ", ");
+
+            }
 
         }
     }

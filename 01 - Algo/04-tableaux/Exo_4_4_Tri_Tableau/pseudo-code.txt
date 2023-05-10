@@ -22,26 +22,47 @@ tableau est un tableau
 indiceA est un entier
 indiceB est un entier
 temp est un entier
+indiceMin est un entier
+i est un entier
 
 
 TRAITEMENT 
 
 	ECRIRE "Bienvenue dans le programme de tri d'un tableau"
 
-	ECRIRE 
+	POUR i allant de 0 à | tableau | en avançant de 1
 
-	LIRE 
+		ECRIRE tableau [i] , ", "
 
-	POUR indiceA allant de 0 à | tableau | en avançant de 1
+	FIN POUR
 
-		POUR indiceB allant de 0 à | tableau | en avançant de 1
+	POUR indiceA allant de à | tableau | en avançant de 1
 
-			TANT QUE tableau [indiceA] > tableau [indiceB]
+		indiceMin <-- indiceA
 
-				temp <-- tableau [indiceB]
-				tableau [indiceB] <-- tableau [indiceA]
-				tableau [indiceA] <-- temp
+		POUR indiceB allant de indiceA + 1 à | tableau | en avançant de 1
 
+			SI tableau [indiceB] < tableau [indiceMin]
+
+				indiceMin <-- indiceB
+
+			FIN SI
+
+		FIN POUR
+
+			temp <-- tableau [indiceMin]
+			tableau [indiceMin] <-- tableau [indiceA]
+			tableau [indiceA] <-- temp
+
+	FIN POUR
+
+	ECRIRE
+
+	POUR i allant de 0 à | tableau | en avançant de 1
+
+		ECRIRE tableau [i] , ", "
+
+	FIN POUR
 
 
 FIN TRAITEMENT 

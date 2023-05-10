@@ -25,7 +25,7 @@ TRAITEMENT
 	LIRE nombreATrouver
 
 	indice <-- 0
-	nombreATrouver <-- faux
+	aTrouve <-- faux
 
 	TANT QUE non aTrouve et indice < |tableau|
 
@@ -43,7 +43,7 @@ TRAITEMENT
 
 	SI aTrouve
 
-		ECRIRE "L'indice est " , indice
+		ECRIRE "L'indice est " , indice"
 
 	SINON
 

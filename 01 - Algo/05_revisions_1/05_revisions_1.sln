@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo_5_1_Calcul_Nombres_Parfaits", "Exo_5_1_Calcul_Nombres_Parfaits\Exo_5_1_Calcul_Nombres_Parfaits.csproj", "{7EFD18D1-F81D-412D-9FCE-165B7E23491B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{B1C8E19D-0662-4461-8000-1F32607ED5B5}"
+	ProjectSection(SolutionItems) = preProject
+		pseudo-code.txt = pseudo-code.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EFD18D1-F81D-412D-9FCE-165B7E23491B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EFD18D1-F81D-412D-9FCE-165B7E23491B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EFD18D1-F81D-412D-9FCE-165B7E23491B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EFD18D1-F81D-412D-9FCE-165B7E23491B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3B4EE13-417C-4742-8205-7D404B543A2A}
+	EndGlobalSection
+EndGlobal
