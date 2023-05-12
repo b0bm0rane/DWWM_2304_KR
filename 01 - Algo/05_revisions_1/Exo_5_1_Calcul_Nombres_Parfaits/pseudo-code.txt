@@ -6,7 +6,9 @@ Exemple :
 
 6 = 1+2+3 
 6 est un nombre parfait.  
-L’algorithme retenu contiendra deux boucles imbriquées. Une boucle de comptage des nombres parfaits qui s’arrêtera lorsque le décompte sera atteint, la boucle interne ayant vocation à calculer tous les diviseurs du nombre examiné d’en faire la somme puis de tester l’égalité entre cette somme et le nombre.
+L’algorithme retenu contiendra deux boucles imbriquées. 
+Une boucle de comptage des nombres parfaits qui s’arrêtera lorsque le décompte sera atteint, la boucle interne ayant vocation à calculer 
+tous les diviseurs du nombre examiné d’en faire la somme puis de tester l’égalité entre cette somme et le nombre.
 
 Ecrivez le programme complet qui affiche les 4 premiers nombres parfaits.
 
@@ -22,6 +24,8 @@ VARIABLES
 
 nombre est un entier
 diviseur est un entier
+totalNbParfait est un entier
+totalDiviseur est un entier
 
 
 
@@ -29,23 +33,14 @@ TRAITEMENT
 
 	ECRIRE "Bienvenue dans le programme du calcul des nombres parfaits"
 
+	totalNbParfait <-- 0
+
 	
+	nombre <-- 1
+	totalDiviseur <-- 0
+	diviseur <-- 1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	ECRIRE nombre , "est un nombre parfait"
 
 
 
