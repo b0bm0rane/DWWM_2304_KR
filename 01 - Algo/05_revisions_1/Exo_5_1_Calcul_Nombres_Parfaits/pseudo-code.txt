@@ -24,8 +24,8 @@ VARIABLES
 
 nombre est un entier
 diviseur est un entier
-totalNbParfait est un entier
-totalDiviseur est un entier
+totalNbParfaits est un entier
+sommeDiviseurs est un entier
 
 
 
@@ -33,14 +33,38 @@ TRAITEMENT
 
 	ECRIRE "Bienvenue dans le programme du calcul des nombres parfaits"
 
-	totalNbParfait <-- 0
-
-	
-	nombre <-- 1
-	totalDiviseur <-- 0
+	nombre <-- 0
 	diviseur <-- 1
+	totalNbParfaits <-- 0
+	
 
+	POUR totalNbParfaits allant de 0 à 4 en avançant de 1
 
+		FAIRE
+
+			nombre <-- nombre + 1
+
+			sommeDiviseurs <-- 0
+
+			POUR diviseur allant de 1 à nombre - 1
+
+				SI nombre % diviseur = 0
+
+					sommeDiviseurs = sommeDiviseurs + diviseur
+
+				FIN SI
+
+			FIN POUR
+		
+			SI sommeDiviseurs = nombre 
+
+				ECRIRE nombre , " est un nombre parfait"
+
+			FIN SI
+	
+		RÉPÉTER TANT QUE sommeDiviseurs != nombre
+
+	FIN POUR
 
 
 
