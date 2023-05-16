@@ -4,34 +4,59 @@
     {
         static void Main(string[] args)
         {
-            double valeurKm;
-            double valeurMiles;
-            string sortie;
+            double valeurKm = 0;
+            double valeurMiles = 0;
+            string saisie;
+            bool sortir = false;
+
+            const string SORTIE = "q";
 
             Console.WriteLine("Bienvenue dans le programme de conversion kilomètres <--> miles");
-
-            sortie = "q";
 
             do
             {
 
                 Console.WriteLine("Saisissez une valeur en km comprise entre 0,01 et 1 000 000 ou q pour quitter le programme");
 
-                valeurKm = double.Parse(Console.ReadLine());
-                
+                saisie = Console.ReadLine();
+
+                if (saisie == SORTIE) // si on a saisi q
+                {
+
+                    sortir = true;
+
+                }
+                else
+                {
+
+                    valeurKm = double.Parse(saisie); // on convertit saisie en double
+
+                    if (valeurKm < 0.01 || valeurKm > 1000000)
+                    {
+
+                        Console.WriteLine("Alerte aux gogoles, alerte aux gogoles les enfants !");
+                        Console.WriteLine();
+
+                    }
+
+                }
+
             }
+            while (!sortir && (valeurKm < 0.01 || valeurKm > 1000000));
 
-            while (valeurKm < 0.01 || valeurKm > 1000000);
-
-            valeurMiles = valeurKm * 1.609;
-
-            Console.WriteLine(valeurKm + " km = " + valeurMiles + " miles");
-
-            if (valeurKm = sortie)
+            if (sortir)
             {
 
-                Console.WriteLine("Fin du programme");
-                
+                Console.WriteLine("Fin du programme, le gogole est parti !");
+
+            }
+            else
+            {
+
+                valeurMiles = valeurKm * 1.609;
+
+                Console.WriteLine(valeurKm + " km = " + valeurMiles + " miles");
+
             }
 
         }

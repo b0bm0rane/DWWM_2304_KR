@@ -12,6 +12,8 @@ VARIABLES
 
 valeurKm est un double
 valeurMiles est un double
+saisie est une chaine de caractere
+sortie est une chaine de caractere
 
 
 
