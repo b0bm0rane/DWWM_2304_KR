@@ -4,11 +4,11 @@
     {
         static void Main(string[] args)
         {
-            double valeurKm = 0;
-            double valeurMiles = 0;
-            string saisie;
+            double km = 0;
+            double mi = 0;
+            double saisie;
             string unite;
-            bool sortir = false;
+            bool sortie;
 
             const string SORTIE = "q";
 
@@ -18,10 +18,44 @@
 
             saisie = Console.ReadLine();
 
-            unite = saisie.Substring(saisie.Length - 2 , 2); // Piocher une partie de la chaine de caractère : (longueur de la chaine - 2 , les 2 derniers
+            unite = saisie.Substring(saisie.Length - 2 , 2); // Piocher une partie de la chaine de caractère : (début saisie longueur saisie - 2 , on prends les 2 derniers indices : saisie --> sais-ie
+            
+            
+            
+            /*
+            Console.WriteLine("Saisissez l'unité à convertir, km ou mi");
 
+            unite = Console.ReadLine();
 
+            Console.WriteLine("Saisissez la valeur à convertir");
 
+            saisie = double.Parse(Console.ReadLine());
+
+            if (unite == "km")
+            {
+
+                mi = (1.609 * saisie);
+
+                Console.WriteLine(saisie + unite + " = " + mi + " mi");
+
+            }
+            else if (unite == "mi")
+            {
+
+                km = (saisie / 1.609);
+
+                Console.WriteLine(saisie + unite + " = " + km + " km");
+
+            }
+            else
+            {
+
+                mi = (1.609 * saisie);
+
+                Console.WriteLine(saisie + "km " + " = " + mi + " mi");
+
+            }
+            */
         }
     }
 }
