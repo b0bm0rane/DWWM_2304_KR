@@ -17,7 +17,7 @@ Si aucune unité de mesure n’est indiquée, le programme considère la valeur 
 VARIABLES 
 
 	saisie est une chaine de caractere
-	valeur est un double 
+	valeur est un double
 	unite est une chaine de caractere 
 	sortir est un booleen
 
@@ -39,21 +39,25 @@ TRAITEMENT
 
 			sortir <-- vrai
 
-		SINON SI |saisie| <= 2
-			
-			unite <-- "km"
-			
-		SINON 
-		
-			unite <-- saisie[ |saisie| - 2 : |saisie| - 1 ]
-		
-		FIN SI
-
+		SINON SI |saisie| >= 2
+	
+			unite <-- saisie[ |saisie| - 2 : |saisie| - 1 ] 
+															
+		FIN SI												
+															
 		ECRIRE unite
+		
+////////////////////////////////////////////////////////////////////////////////	
+		SI unite = "km" ou unite = "mi" ou unite = ""		////////////////////
+															////////////////////
+				saisie <-- saisie[ 0 : |saisie| - 3 ]		////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-		SI unite = "km" ou unite = "mi" ou unite = ""
+		SI unite = "km" ou unite = "mi"						
+															
+				saisie <-- saisie[ 0 : |saisie| - |unite| ]
 
-			saisie <-- saisie[ 0 : |saisie| - 3 ]
+////////////////////////////////////////////////////////////////////////////////
 
 			SI saisie EST UN DOUBLE
 
@@ -65,25 +69,31 @@ TRAITEMENT
 
 				SINON 
 
-					sortie <-- vrai
+					sortir <-- vrai
 
 				FIN SI
 
-			SINON valeur incorrecte
+			SINON 
+			
+				ECRIRE "Valeur incorrecte"
 
 			FIN SI
 
 		FIN SI
 
-	REPETER TANT QUE !sortie
+	REPETER TANT QUE (NON sortir)
 		
 	SI unite = "km" ou unite = ""
 
-		ECRIRE valeur , "km" = valeur / 1.609 , "mi"
+		ECRIRE valeur , "km = " valeur / 1.609 , "mi"
 
-	SINON
+	SINON SI
 
 		ECRIRE valeur , "mi = " valeur * 1.609 , "km"
+
+	SINON SI saisie == SORTIE
+
+		ECRIRE "Fin du programme"
 
 	FIN SI
 

@@ -7,9 +7,9 @@
             string saisie;
             double valeur;
             string unite;
-            bool sorti;
+            bool sortir;
 
-            sorti = false;
+            sortir = false;
             const string SORTIE = "q";
 
             Console.WriteLine("Bienvenue dans le programme de choix de conversion kilomètres <--> miles");
@@ -67,7 +67,7 @@
                 if (saisie == "q")
                 {
 
-                    sorti = true;
+                    sortir = true;
 
                 }
                 else if (saisie.Length <= 2)
@@ -87,14 +87,17 @@
 
                 Console.WriteLine("L'unité est : " + unite);
 
-                if (unite == "km" || unite == "mi" || unite == "")
+                if (unite == "km" || unite == "mi")
                 {
 
-                    valeur = saisie.Substring(0, saisie.Length - 3);
+                    saisie = saisie.Substring(0, saisie.Length - unite);
 
                 }
 
-            } while (sorti == false);
+            } while (sortir == false);
+
+
+
         }
     }
 }
