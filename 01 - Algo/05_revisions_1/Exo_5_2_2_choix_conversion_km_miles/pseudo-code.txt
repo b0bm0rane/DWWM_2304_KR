@@ -16,16 +16,76 @@ Si aucune unité de mesure n’est indiquée, le programme considère la valeur 
 
 VARIABLES 
 
+	saisie est une chaine de caractere
+	valeur est un double 
+	unite est une chaine de caractere 
+	sortir est un booleen
 
+CONSTANTES
+
+	SORTIE <-- "q" est une chaine de caractere contante
 
 TRAITEMENT 
 
 	ECRIRE "Bienvenue dans le programme de choix de conversion kilomètres <--> miles"
 
-	ECRIRE 
+	FAIRE
 
-	LIRE 
+		ECRIRE "Saisissez la valeur à convertir avec son unité de mesure : km ou mi"
 
+		LIRE saisie
+
+		SI saisie = SORTIE
+
+			sortir <-- vrai
+
+		SINON SI |saisie| <= 2
+			
+			unite <-- "km"
+			
+		SINON 
+		
+			unite <-- saisie[ |saisie| - 2 : |saisie| - 1 ]
+		
+		FIN SI
+
+		ECRIRE unite
+
+		SI unite = "km" ou unite = "mi" ou unite = ""
+
+			saisie <-- saisie[ 0 : |saisie| - 3 ]
+
+			SI saisie EST UN DOUBLE
+
+				valeur <-- saisie EN DOUBLE
+
+				SI valeur < 0.01 ou valeur > 1 000 000
+
+					ECRIRE "La valeur n'est pas dans la plage"
+
+				SINON 
+
+					sortie <-- vrai
+
+				FIN SI
+
+			SINON valeur incorrecte
+
+			FIN SI
+
+		FIN SI
+
+	REPETER TANT QUE !sortie
+		
+	SI unite = "km" ou unite = ""
+
+		ECRIRE valeur , "km" = valeur / 1.609 , "mi"
+
+	SINON
+
+		ECRIRE valeur , "mi = " valeur * 1.609 , "km"
+
+	FIN SI
 
 
 FIN TRAITEMENT 

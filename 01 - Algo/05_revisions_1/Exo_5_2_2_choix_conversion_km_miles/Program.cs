@@ -4,25 +4,26 @@
     {
         static void Main(string[] args)
         {
-            double km = 0;
-            double mi = 0;
-            double saisie;
+            string saisie;
+            double valeur;
             string unite;
-            bool sortie;
+            bool sorti;
 
+            sorti = false;
             const string SORTIE = "q";
 
             Console.WriteLine("Bienvenue dans le programme de choix de conversion kilomètres <--> miles");
 
+            /*
             Console.WriteLine("Saisissez la valeur à convertir avec son unité de mesure : km ou mi");
-
+            
             saisie = Console.ReadLine();
-
+            
             unite = saisie.Substring(saisie.Length - 2 , 2); // Piocher une partie de la chaine de caractère : (début saisie longueur saisie - 2 , on prends les 2 derniers indices : saisie --> sais-ie
             
-            
-            
-            /*
+
+
+
             Console.WriteLine("Saisissez l'unité à convertir, km ou mi");
 
             unite = Console.ReadLine();
@@ -56,6 +57,44 @@
 
             }
             */
+            do
+            {
+
+                Console.WriteLine("Saisissez la valeur à convertir avec son unité de mesure : km ou mi");
+
+                saisie = Console.ReadLine();
+
+                if (saisie == "q")
+                {
+
+                    sorti = true;
+
+                }
+                else if (saisie.Length <= 2)
+                {
+
+                    unite = "km";
+
+                }
+                else
+                {
+
+                    unite = saisie.Substring(saisie.Length - 2, 2); // Piocher une partie de la chaine de caractère : (début saisie longueur saisie - 2 , on prends les 2 derniers indices : saisie --> sais-ie
+
+                    Console.WriteLine("L'unité est : " + unite);
+
+                }
+
+                Console.WriteLine("L'unité est : " + unite);
+
+                if (unite == "km" || unite == "mi" || unite == "")
+                {
+
+                    valeur = saisie.Substring(0, saisie.Length - 3);
+
+                }
+
+            } while (sorti == false);
         }
     }
 }

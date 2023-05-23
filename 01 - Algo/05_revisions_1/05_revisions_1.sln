@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exo_5_2_1_conversion_km_miles", "Exo_5_2_1_conversion_km_miles\Exo_5_2_1_conversion_km_miles.csproj", "{199724A3-5C8E-4419-9BBA-546D7B38F28A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo_5_2_2_choix_conversion_km_miles", "Exo_5_2_2_choix_conversion_km_miles\Exo_5_2_2_choix_conversion_km_miles.csproj", "{4B8C5003-7AAA-4073-97FD-539DC28ABBC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exo_5_2_2_choix_conversion_km_miles", "Exo_5_2_2_choix_conversion_km_miles\Exo_5_2_2_choix_conversion_km_miles.csproj", "{4B8C5003-7AAA-4073-97FD-539DC28ABBC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXO_5_3_Conversion_Fahrenheit_Degre", "EXO_5_3_Conversion_Fahrenheit_Degre\EXO_5_3_Conversion_Fahrenheit_Degre.csproj", "{522989EB-3FFD-4533-A48C-4A44F00661F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{4B8C5003-7AAA-4073-97FD-539DC28ABBC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B8C5003-7AAA-4073-97FD-539DC28ABBC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B8C5003-7AAA-4073-97FD-539DC28ABBC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522989EB-3FFD-4533-A48C-4A44F00661F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522989EB-3FFD-4533-A48C-4A44F00661F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522989EB-3FFD-4533-A48C-4A44F00661F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522989EB-3FFD-4533-A48C-4A44F00661F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
