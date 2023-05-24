@@ -1,0 +1,38 @@
+﻿A tour de rôle, l’ordinateur et le joueur choisissent un nombre qui ne peut prendre que 3 valeurs: 0, 1 ou 2.
+
+Le choix du nombre par l’ordinateur sera simulé par génération d’un nombre aléatoire : N <-- RANDOM
+
+Si la différence entre les nombres choisi vaut :
+
+2 : le joueur qui a proposé le plus grand nombre gagne un point.
+1 : le joueur qui a proposé le plus petit nombre gagne un point.
+0 : aucun point n’est marqué.
+Le jeu se termine quand un des deux joueurs (l’ordinateur ou le joueur humain) totalise 10 points ou quand l’être humain introduit un nombre négatif qui indique sa volonté d’arrêter de jouer.
+
+Dans les 2 cas, afficher les scores.
+
+
+
+VARIABLES 
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme du jeu 0-2"
+
+	ECRIRE 
+
+	LIRE 
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
