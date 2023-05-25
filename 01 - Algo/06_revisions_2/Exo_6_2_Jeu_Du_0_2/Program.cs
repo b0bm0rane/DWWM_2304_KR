@@ -90,6 +90,9 @@
 
 
                 }
+
+                Console.WriteLine("Le nombre de l'ordinateur est " + nbOrdi);
+
             }
             while (!(scoreOrdi >= 10 || scoreJoueur >=10 || nbJoueur < 0));
 

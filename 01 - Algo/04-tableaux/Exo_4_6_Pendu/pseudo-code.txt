@@ -1,0 +1,104 @@
+﻿L'algorithme lit un mot proposé par un premier joueur. 
+Ce mot a une longueur minimum de 5 caractères (à contrôler). 
+L'algorithme affiche ensuite le mot où toutes les lettres sauf la première et la dernière sont 
+remplacées par un tiret. 
+Un deuxième joueur propose des lettres une à une. 
+Chaque fois que la lettre se trouve dans le mot, l'algorithme remplace les 
+tirets qui remplaçaient cette lettre et réaffiche le mot. 
+Le second joueur a droit à un maximum de 6 essais infructueux (lettre ne se trouvant pas dans 
+le mot). 
+
+
+
+VARIABLES 
+
+mot est une chaine de caractère
+lettre est un caractère
+tabMot est un tableau
+tabMotMystere est un tableau
+essais est un entier = 6
+lettreTrouvée est un booleen = faux
+gagné est un booleen = faux
+
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme du pendu"
+
+	ECRIRE "Saisissez un mot de 5 lettres minimum"
+
+	LIRE mot
+
+	Effacer la console
+
+	tabMot <-- les lettres du mot
+
+	tabMotMystere = tabMot
+
+	POUR i allant de i = 1 à i < |tabMotMystere| - 1 en avançant de 1
+
+		tabMotMystere[i] <-- "-"
+
+	FAIRE
+
+		ECRIRE "Saisissez une lettre"
+
+		LIRE lettre
+
+		lettreTrouvée = faux
+
+		POUR i allant de i = 1 à i < |tabMot| - 1 en avançant de 1
+
+			SI mot[i] = lettre
+
+				tabMotMystere[i] = lettre
+
+				lettreTrouvée = vrai
+
+			FIN SI
+
+			SI tabMot = tabMotMystere
+
+				gagné = vrai
+
+			SINON
+
+				gagné = faux
+
+			FIN SI
+
+		FIN POUR
+
+		SI lettreTrouvée = vrai
+
+			ECRIRE "La lettre " , lettre , " est dans le mot"
+
+		SINON
+
+			essais = essais - 1
+
+		FIN SI
+
+	REPETER TANT QUE erreurs > 0 ou gagné = faux
+
+	SI gagné = vrai
+
+		ECRIRE "Vous avez gagné"
+
+	SINON 
+
+		ECRIRE "Perdu"
+
+	
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
