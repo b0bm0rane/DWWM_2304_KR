@@ -1,0 +1,60 @@
+﻿Simulateur d'EMPRUNT - Franck CHATELOT 2018 
+Exercice à faire en mode PROCEDURAL (puis OBJET)
+// EXPLICATION DE CHAQUE VARIABLE
+ // tauxInteretAnnuel -> taux de l'interet annuel
+ // nbrAnneeRbmt -> le nombre d'annee de remboursement
+ // capitalEmprunte -> le capital emprunte
+// tauxInteretmensuel -> taux de l'intérêt mensuel<- tauxInteretAnnuel/12
+ // mensualite -> la mensualite constante a rembourser
+ // mois -> le nombre de mois de la période
+ // interetsMensuel -> les intérets du mois courant
+ // amortissementMois -> le montant de l'amortissement du capital pour le mois courant
+ 
+1) Réaliser la fonction qui renvoie la mensualité constante du prêt :
+ En fonction du "tauxInteretAnnuel" et du "capitalEmprunte" et du "nbrAnneeRbmt",
+ Afficher l'annuité et la "mensualité" constante à rembourser d'après la formule de calcul qui vous est communiqué par 
+la maîtrise d'ouvrage".
+Formule financière calcul de la mensualité constante : a 
+Avec 2 chiffres décimaux obligatoires.
+Soit n nbre de mois de remboursement
+tm= tmensuel=txannuel/12
+a= K x tm/Q
+Q= (1-(1+ tm )puissance-n)
+2) Réaliser une fonction qui renvoie et affiche le tableau d'amortissement du prêt :
+ Afficher le tableau d'amortissement mensuel du prêt en mode console sur 5 colonnes
+ compteur numero mois// part interet(1 décimal) // part capital(1decimal) // capital restant(pas de décimal) du// 
+mensualité (pas de décimal) 
+ 
+ 
+Soit K(n) capital restant dû au mois n
+Quand n=0 k(n)=Capital emprunté.
+Quand n>0
+k(n+1)=k(n)- part_Capital(n) 
+part_Capital(n+1) = Mensualité - part Interet(n+1).
+part_Interet(n+1) = K(n)*tm
+
+
+
+VARIABLES 
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme d'Emprunt avec création d'un tableau d'amortissement"
+
+	ECRIRE 
+
+	LIRE 
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME

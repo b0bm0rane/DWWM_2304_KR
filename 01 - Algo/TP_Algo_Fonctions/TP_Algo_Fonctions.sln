@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP_Emprunt_Avec_Creation_Tableau_Ammortissement", "TP_Emprunt_Avec_Creation_Tableau_Ammortissement\TP_Emprunt_Avec_Creation_Tableau_Ammortissement.csproj", "{5B3CDB47-28F6-49AE-A6B6-47FA7BCE6995}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{585D1557-1DF9-4CDC-81FA-BC7ED4BD61E0}"
+	ProjectSection(SolutionItems) = preProject
+		pseudo-code.txt = pseudo-code.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B3CDB47-28F6-49AE-A6B6-47FA7BCE6995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3CDB47-28F6-49AE-A6B6-47FA7BCE6995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3CDB47-28F6-49AE-A6B6-47FA7BCE6995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3CDB47-28F6-49AE-A6B6-47FA7BCE6995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D9E09E6-7FEB-4FE0-AD67-7FB0728CD4B2}
+	EndGlobalSection
+EndGlobal
