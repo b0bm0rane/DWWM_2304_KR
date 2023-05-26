@@ -52,6 +52,7 @@
                     tabMotMystere[i] = '-';
                 
                 }
+
             }
 
             do
