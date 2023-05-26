@@ -6,6 +6,8 @@
         {
             string mot;
 
+            string lettreSaisie;
+
             char lettre;
 
             char[] tabMot;
@@ -25,8 +27,11 @@
                 Console.WriteLine("Saisissez un mot de 5 lettres minimum");
 
                 mot = Console.ReadLine();
+
+                Console.WriteLine("Alerte aux gaugaules, alerte aux gaugaules les enfants !!!");
+
             }
-            while (mot == "");
+            while (mot == "" || mot.Length < 5);
 
             Console.Clear();
 
@@ -36,25 +41,39 @@
 
             Array.Copy(tabMot, tabMotMystere, tabMot.Length);
 
-            gagne = false;
 
             essais = 6;
 
             for (int i = 1; i < tabMotMystere.Length - 1; i++)
             {
 
-                tabMotMystere[i] = '-';
+                if (tabMotMystere[i] != ' ') {
 
+                    tabMotMystere[i] = '-';
+                
+                }
             }
 
             do
             {
 
                 Console.WriteLine(tabMotMystere);
-                
-                Console.WriteLine("Saisissez une lettre");
 
-                lettre = char.Parse(Console.ReadLine());
+                do
+                {
+
+                    do
+                    {
+
+                        Console.WriteLine("Saisissez une lettre");
+
+                        lettreSaisie = Console.ReadLine();
+
+                    }
+                    while (!char.TryParse(lettreSaisie, out lettre)); // Tente de convertir lettreSaisie en char, et si possible, le stock dans lettre
+
+                }
+                while (lettre == ' ');
 
                 lettreTrouvee = false;
 
@@ -73,7 +92,7 @@
                 if (lettreTrouvee == true)
                 {
 
-                    Console.WriteLine("La lettre " + lettre + " est dans le mot");
+                    Console.WriteLine("La lettre " + lettre + " est présente dans le mot, il vous reste " + essais + " essais");
 
                     for (int i = 1; i < tabMot.Length - 1; i++)
                     {
@@ -95,34 +114,37 @@
 
                     essais = essais - 1;
 
+                    Console.WriteLine("La lettre " + lettre + " n'est pas présente dans le mot, il vous reste " + essais + " essais");
+
                 }
 
-                if (tabMot == tabMotMystere)
+                gagne = true;
+
+                for (int i = 1; i < tabMotMystere.Length-1; i++)
                 {
-
-                    gagne = true;
-
+                    if (tabMotMystere[i].CompareTo('-') == 0)
+                    {
+                        gagne = false;
+                    }
+                     
                 }
-                else
-                {
+               
 
-                    gagne = false;
-
-                }
+                   
 
             }
-            while (essais > 0 || gagne == false);
+            while (essais > 0 && gagne == false);
 
             if (gagne == true)
             {
 
-                Console.WriteLine("Vous avez gagné");
+                Console.WriteLine("Vous avez gagné, le mot était " + mot);
 
             }
             else
             {
 
-                Console.WriteLine("Vous avez perdu");
+                Console.WriteLine("Vous avez perdu, vous êtes pendu, le mot était " + mot);
 
             }
 
