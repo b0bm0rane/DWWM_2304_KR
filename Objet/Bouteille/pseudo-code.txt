@@ -1,0 +1,27 @@
+﻿SUJET
+
+
+
+VARIABLES 
+
+
+
+TRAITEMENT 
+
+	ECRIRE "Bienvenue dans le programme "
+
+	ECRIRE 
+
+	LIRE 
+
+
+
+FIN TRAITEMENT 
+
+
+
+AFFICHAGE 
+
+
+
+FIN PROGRAMME
