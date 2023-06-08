@@ -16,8 +16,21 @@ namespace CL_Bouteille
         private string nomBoisson;
         private bool estOuverte;
 
+        public Bouteille() 
+        { // Constructeur par défaut
+
+            alcool = true;
+            contenanceEnL = 0.75f;
+            contenuEnL = 0;
+            estGazeux = false;
+            matiere = "verre";
+            nomBoisson = "Bourgogne";
+            estOuverte = true;
+
+        }
+
         public Bouteille(bool _alcool, float _contenanceEnL, float _contenuEnL, bool _estGazeux, string _matiere, string _nomBoisson, bool _estOuverte)
-        {
+        { // Constructeur classique
 
             this.alcool = _alcool;
             this.contenanceEnL = _contenanceEnL;
@@ -29,7 +42,20 @@ namespace CL_Bouteille
 
         }
 
-        public bool Ouvrir()
+        public Bouteille(Bouteille bouteilleACopier)
+        {// Constructeur par copie/clonage
+
+            this.alcool = bouteilleACopier.alcool;
+            this.contenanceEnL = bouteilleACopier.contenanceEnL;
+            this.contenuEnL = bouteilleACopier.contenuEnL;
+            this.estGazeux = bouteilleACopier.estGazeux;
+            this.matiere = bouteilleACopier.matiere;
+            this.nomBoisson = bouteilleACopier.nomBoisson;
+            this.estOuverte = bouteilleACopier.estOuverte;
+
+        }
+
+    public bool Ouvrir()
         {
 
             if (!estOuverte)
@@ -48,13 +74,54 @@ namespace CL_Bouteille
             }
 
         }
-        public bool Fermer()
+
+    public bool Fermer()
         {
 
             if (estOuverte)
             {
                 this.estOuverte = false;
-                
+
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
+        }
+
+    public bool RemplirTout()
+        {
+
+            if (contenuEnL < contenanceEnL && estOuverte)
+            {
+
+                contenuEnL = contenanceEnL;
+
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
+        }
+
+    public bool ViderTout()
+        {
+
+            if (contenuEnL > 0 && contenuEnL <= contenanceEnL && estOuverte)
+            {
+
+                contenuEnL = 0;
+
                 return true;
 
             }
@@ -68,4 +135,6 @@ namespace CL_Bouteille
         }
 
     }
+   
+
 }
