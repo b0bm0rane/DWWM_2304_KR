@@ -53,12 +53,14 @@ namespace CL_Bouteille
             this.nomBoisson = bouteilleACopier.nomBoisson;
             this.estOuverte = bouteilleACopier.estOuverte;
 
+            // this = cet objet
+
         }
 
-    public bool Ouvrir()
+        public bool Ouvrir()
         {
 
-            if (!estOuverte)
+            if (!this.estOuverte)
             {
 
                 this.estOuverte = true;
@@ -75,10 +77,10 @@ namespace CL_Bouteille
 
         }
 
-    public bool Fermer()
+        public bool Fermer()
         {
 
-            if (estOuverte)
+            if (this.estOuverte)
             {
                 this.estOuverte = false;
 
@@ -94,13 +96,13 @@ namespace CL_Bouteille
 
         }
 
-    public bool RemplirTout()
+        public bool RemplirTout()
         {
 
-            if (contenuEnL < contenanceEnL && estOuverte)
+            if (this.contenuEnL < this.contenanceEnL && this.estOuverte)
             {
 
-                contenuEnL = contenanceEnL;
+                this.contenuEnL = this.contenanceEnL;
 
                 return true;
 
@@ -114,15 +116,80 @@ namespace CL_Bouteille
 
         }
 
-    public bool ViderTout()
+        public bool ViderTout()
         {
 
-            if (contenuEnL > 0 && contenuEnL <= contenanceEnL && estOuverte)
+            if (this.contenuEnL > 0 && this.contenuEnL <= this.contenanceEnL && this.estOuverte)
             {
 
-                contenuEnL = 0;
+                this.contenuEnL = 0;
 
                 return true;
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
+        }
+
+        public bool Remplir(float quantiteARemplirEnL)
+        {
+
+            if (this.contenuEnL < this.contenanceEnL && this.estOuverte)
+            {
+                float nouveauContenu = this.contenuEnL + quantiteARemplirEnL;
+
+                if (nouveauContenu <= this.contenanceEnL)
+                {
+
+                    this.contenuEnL += quantiteARemplirEnL;
+
+                    return true;
+
+                }
+                else
+                {
+
+                    return false;
+
+                }
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
+        }
+
+        public bool Vider(float quantiteAViderEnL)
+        {
+
+            if (this.contenuEnL > 0 && this.estOuverte)
+            {
+
+                float nouveauContenu = this.contenuEnL - quantiteAViderEnL;
+
+                if (nouveauContenu >= 0)
+                {
+
+                    this.contenuEnL -= quantiteAViderEnL;
+
+                    return true;
+
+                }
+                else
+                {
+
+                    return false;
+
+                }
 
             }
             else

@@ -8,12 +8,15 @@ namespace Projet_Bouteille
         static void Main(string[] args)
         {
 
-            Bouteille bouteilleDeCoke = new Bouteille(false, 0.5f, 0, true, "plastique", "Coke", false);
+            Bouteille bouteilleDeCoke = new Bouteille(false, 0.5f, 0.25f, true, "plastique", "Coke", false);
 
             bouteilleDeCoke.Ouvrir();
             bouteilleDeCoke.Fermer();
             bouteilleDeCoke.RemplirTout();
             bouteilleDeCoke.ViderTout();
+            bouteilleDeCoke.Ouvrir();
+            bouteilleDeCoke.Remplir(0.1f);
+            bouteilleDeCoke.Vider(0.1f);
 
             Bouteille bouteilleDeVin = new Bouteille();
 
@@ -21,6 +24,8 @@ namespace Projet_Bouteille
             bouteilleDeVin.Fermer();
             bouteilleDeVin.RemplirTout();
             bouteilleDeVin.ViderTout();
+            bouteilleDeVin.Remplir(0.1f);
+            bouteilleDeVin.Vider(0.1f);
 
             Bouteille bouteilleDijon = new Bouteille(bouteilleDeVin);
 
@@ -28,6 +33,8 @@ namespace Projet_Bouteille
             bouteilleDijon.Fermer();
             bouteilleDijon.RemplirTout();
             bouteilleDijon.ViderTout();
+            bouteilleDijon.Remplir(0.1f);
+            bouteilleDijon.Vider(0.1f);
 
         }
     }
