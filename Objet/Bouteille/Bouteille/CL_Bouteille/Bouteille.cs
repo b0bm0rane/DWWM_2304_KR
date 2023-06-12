@@ -9,10 +9,10 @@ namespace CL_Bouteille
     public class Bouteille
     {
         private bool alcool;
-        private float contenanceEnL;
+        private readonly float contenanceEnL;
         private float contenuEnL;
         private bool estGazeux;
-        private string matiere;
+        private readonly string matiere;
         private string nomBoisson;
         private bool estOuverte;
 
@@ -96,7 +96,7 @@ namespace CL_Bouteille
 
         }
 
-        public bool RemplirTout()
+        public bool Remplir()
         {
 
             if (this.contenuEnL < this.contenanceEnL && this.estOuverte)
@@ -116,7 +116,7 @@ namespace CL_Bouteille
 
         }
 
-        public bool ViderTout()
+        public bool Vider()
         {
 
             if (this.contenuEnL > 0 && this.contenuEnL <= this.contenanceEnL && this.estOuverte)

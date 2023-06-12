@@ -5,6 +5,7 @@ namespace Projet_Bouteille
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
 
@@ -12,8 +13,8 @@ namespace Projet_Bouteille
 
             bouteilleDeCoke.Ouvrir();
             bouteilleDeCoke.Fermer();
-            bouteilleDeCoke.RemplirTout();
-            bouteilleDeCoke.ViderTout();
+            bouteilleDeCoke.Remplir();
+            bouteilleDeCoke.Vider();
             bouteilleDeCoke.Ouvrir();
             bouteilleDeCoke.Remplir(0.1f);
             bouteilleDeCoke.Vider(0.1f);
@@ -22,8 +23,8 @@ namespace Projet_Bouteille
 
             bouteilleDeVin.Ouvrir();
             bouteilleDeVin.Fermer();
-            bouteilleDeVin.RemplirTout();
-            bouteilleDeVin.ViderTout();
+            bouteilleDeVin.Remplir();
+            bouteilleDeVin.Vider();
             bouteilleDeVin.Remplir(0.1f);
             bouteilleDeVin.Vider(0.1f);
 
@@ -31,8 +32,8 @@ namespace Projet_Bouteille
 
             bouteilleDijon.Ouvrir();
             bouteilleDijon.Fermer();
-            bouteilleDijon.RemplirTout();
-            bouteilleDijon.ViderTout();
+            bouteilleDijon.Remplir();
+            bouteilleDijon.Vider();
             bouteilleDijon.Remplir(0.1f);
             bouteilleDijon.Vider(0.1f);
 
