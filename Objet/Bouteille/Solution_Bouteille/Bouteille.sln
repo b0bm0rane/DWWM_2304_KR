@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet_Bouteille", "Projet_Bouteille\Projet_Bouteille.csproj", "{9BC9DA70-63C3-4283-B502-D4CD4E0DC5E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projet_Bouteille", "Projet_Bouteille\Projet_Bouteille.csproj", "{9BC9DA70-63C3-4283-B502-D4CD4E0DC5E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CL_Bouteille", "CL_Bouteille\CL_Bouteille.csproj", "{3FE0874D-6C69-450C-8280-7F2086E76630}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CL_Bouteille", "CL_Bouteille\CL_Bouteille.csproj", "{3FE0874D-6C69-450C-8280-7F2086E76630}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
