@@ -8,5 +8,35 @@ namespace CL_Lepidoptere
 {
     internal class Papillon
     {
+
+        private bool estMouvant;
+        private bool estVivant;
+
+        public Papillon()
+        {
+
+            estMouvant = true;
+            estVivant = true;
+
+        }
+
+        public bool SeDeplacer()
+        {
+
+            if (this.estMouvant && this.estVivant)
+            {
+
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
+        }
+
     }
 }
