@@ -6,37 +6,24 @@ using System.Threading.Tasks;
 
 namespace CL_Lepidoptere
 {
-    internal class Chrysalide
+    internal class Chrysalide : Stade
     {
 
-        private bool estMouvant;
-        private bool estVivant;
-
-        public Chrysalide()
+        public override void SeDeplacer()
         {
 
-            estMouvant = false;
-            estVivant = true;
+            Console.WriteLine("Je glande !");
 
         }
 
-        public bool SeDeplacer()
+        public override Stade SeMetamorphoser()
         {
 
-            if (this.estMouvant && this.estVivant)
-            {
-
-                return true;
-
-            }
-            else
-            {
-
-                return false;
-
-            }
+            return new Papillon();
 
         }
+
+
 
     }
 }

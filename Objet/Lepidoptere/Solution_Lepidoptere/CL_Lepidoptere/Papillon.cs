@@ -6,35 +6,20 @@ using System.Threading.Tasks;
 
 namespace CL_Lepidoptere
 {
-    internal class Papillon
+    internal class Papillon : Stade
     {
 
-        private bool estMouvant;
-        private bool estVivant;
-
-        public Papillon()
+        public override void SeDeplacer()
         {
 
-            estMouvant = true;
-            estVivant = true;
+            Console.WriteLine("ça plane pour moi !");
 
         }
 
-        public bool SeDeplacer()
+        public override Stade SeMetamorphoser()
         {
 
-            if (this.estMouvant && this.estVivant)
-            {
-
-                return true;
-
-            }
-            else
-            {
-
-                return false;
-
-            }
+            return new Papillon();
 
         }
 

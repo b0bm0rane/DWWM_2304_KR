@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CL_Lepidoptere
 {
-    internal class Stade
+    internal abstract class Stade
     {
+        public abstract void SeDeplacer();
+
+        public abstract Stade SeMetamorphoser();
     }
 }

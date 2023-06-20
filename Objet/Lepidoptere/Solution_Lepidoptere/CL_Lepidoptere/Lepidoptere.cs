@@ -6,36 +6,24 @@ using System.Threading.Tasks;
 
 namespace CL_Lepidoptere
 {
-    internal class Lepidoptere
+    public class Lepidoptere
     {
 
-        private bool estMouvant;
-        private bool estVivant;
+        private Stade stadeCourant;
 
         public Lepidoptere()
         {
-
-            estMouvant = true;
-            estVivant = true;
-
+            this.stadeCourant = new Chenille();
         }
 
-        public bool SeDeplacer()
+        public void SeDeplacer()
         {
+            this.stadeCourant.SeDeplacer();
+        }
 
-            if (this.estMouvant && this.estVivant)
-            {
-
-                return true;
-
-            }
-            else
-            {
-
-                return false;
-
-            }
-
+        public void SeMetamorphoser()
+        {
+            this.stadeCourant = this.stadeCourant.SeMetamorphoser();
         }
 
     }

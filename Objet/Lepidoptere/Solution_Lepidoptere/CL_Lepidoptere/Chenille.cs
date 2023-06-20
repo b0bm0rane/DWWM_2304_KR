@@ -6,35 +6,20 @@ using System.Threading.Tasks;
 
 namespace CL_Lepidoptere
 {
-    internal class Chenille
+    internal class Chenille : Stade
     {
-
-        private bool estMouvant;
-        private bool estVivant;
-
-        public Chenille()
+        
+        public override void SeDeplacer()
         {
 
-            estMouvant = true;
-            estVivant = true;
+            Console.WriteLine("Je rampe !");
 
         }
 
-        public bool SeDeplacer()
+        public override Stade SeMetamorphoser()
         {
 
-            if (this.estMouvant && this.estVivant)
-            {
-
-                return true;
-
-            }
-            else
-            {
-
-                return false;
-
-            }
+            return new Chrysalide();
 
         }
 
