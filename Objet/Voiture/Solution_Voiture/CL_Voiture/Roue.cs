@@ -6,26 +6,27 @@ using System.Threading.Tasks;
 
 namespace CL_Voiture
 {
-    internal class Roue
+    public class Roue
     {
 
-        private int dimensionPneuEnCm;
-        private double vitesseEnKmh;
+        private int dimensionPneu;
+        private bool tourne;
 
         public Roue()
         {
 
-            this.dimensionPneuEnCm = 50;
-            this.vitesseEnKmh = 10;
+            this.dimensionPneu = 50;
+            this.tourne = true;
 
         }
 
         public bool Stopper()
         {
 
-            if (this.vitesseEnKmh > 0)
+            if (this.tourne)
             {
 
+                this.tourne = false;
                 return true;
 
             }
@@ -41,9 +42,10 @@ namespace CL_Voiture
         public bool Tourner()
         {
 
-            if (this.vitesseEnKmh > 0)
+            if (!this.tourne)
             {
 
+                this.tourne = true;
                 return true;
 
             }

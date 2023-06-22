@@ -8,24 +8,25 @@ using System.Threading.Tasks;
 
 namespace CL_Voiture
 {
-    internal class Moteur
+    public class Moteur
     {
 
-        private bool estEnMarche;
+        private bool enMarche;
 
         public Moteur()
         {
 
-            estEnMarche = true;
+            enMarche = true;
 
         }
 
         public bool Demarrer()
         {
 
-            if (!this.estEnMarche)
+            if (!this.enMarche)
             {
 
+                this.enMarche = true;
                 return true;
 
             }
@@ -41,7 +42,26 @@ namespace CL_Voiture
         public bool Eteindre()
         {
 
-            if (this.estEnMarche)
+            if (this.enMarche)
+            {
+
+                this.enMarche = false;
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
+        }
+
+        public bool ArreterRoues(Roue roue1, Roue roue2)
+        {
+
+            if (!this.enMarche)
             {
 
                 return true;
@@ -56,17 +76,21 @@ namespace CL_Voiture
 
         }
 
-        public bool ArreterRoues()
+        public bool EntrainerRoues(Roue roue1, Roue roue2)
         {
 
+            if (this.enMarche)
+            {
 
+                return true;
 
-        }
+            }
+            else
+            {
 
-        public bool EntrainerRoues()
-        {
+                return false;
 
-
+            }
 
         }
 
