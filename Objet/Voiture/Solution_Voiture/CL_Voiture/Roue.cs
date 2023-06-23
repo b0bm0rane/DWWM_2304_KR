@@ -16,7 +16,7 @@ namespace CL_Voiture
         {
 
             this.dimensionPneu = 50;
-            this.tourne = true;
+            this.tourne = false;
 
         }
 

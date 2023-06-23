@@ -18,15 +18,20 @@ namespace CL_Voiture
 
             this.marque = "Peugeot";
             this.sonMoteur = new Moteur();
-            this.ses4Roues = new List<Roue>();
+            this.ses4Roues = new List<Roue>
+            {
+                new Roue(),
+                new Roue(),
+                new Roue(),
+                new Roue()
+            };
 
         }
 
         public bool Avancer()
         {
 
-            return this.sonMoteur.Demarrer();
-            return this.sonMoteur.EntrainerRoues(ses4Roues[0], ses4Roues[1]);
+            return this.sonMoteur.EntrainerRoues(this.ses4Roues[0], this.ses4Roues[1]);
 
         }
 
@@ -37,10 +42,17 @@ namespace CL_Voiture
 
         }
 
+        public bool Eteindre()
+        {
+
+            return this.sonMoteur.Eteindre();
+
+        }
+
         public bool Freiner()
         {
 
-            return this.sonMoteur.ArreterRoues(ses4Roues[0], ses4Roues[1]);
+            return this.sonMoteur.ArreterRoues(this.ses4Roues[0], this.ses4Roues[1]);
 
         }
         

@@ -16,7 +16,7 @@ namespace CL_Voiture
         public Moteur()
         {
 
-            enMarche = true;
+            enMarche = false;
 
         }
 
@@ -60,37 +60,20 @@ namespace CL_Voiture
 
         public bool ArreterRoues(Roue roue1, Roue roue2)
         {
+            bool roue1ok = roue1.Stopper();
+            bool roue2ok = roue2.Stopper();
 
-            if (!this.enMarche)
-            {
-
-                return true;
-
-            }
-            else
-            {
-
-                return false;
-
-            }
+            return (roue1ok && roue2ok);
 
         }
 
         public bool EntrainerRoues(Roue roue1, Roue roue2)
         {
 
-            if (this.enMarche)
-            {
+            bool roue1ok = roue1.Tourner();
+            bool roue2ok = roue2.Tourner();
 
-                return true;
-
-            }
-            else
-            {
-
-                return false;
-
-            }
+            return (roue1ok && roue2ok);
 
         }
 

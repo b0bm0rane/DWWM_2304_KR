@@ -6,6 +6,11 @@ namespace Console_Voiture
     {
         static void Main(string[] args)
         {
+
+            Voiture v = new Voiture();
+            v.Demarrer();
+
+            /*
             Roue r = new Roue();
             Roue r2 = new Roue();
 
@@ -13,7 +18,7 @@ namespace Console_Voiture
             bool okm = m.Demarrer();
             bool ok = m.EntrainerRoues(r, r2);
 
-            /*try
+            try
             {
                 Voiture v = new Voiture("Peugeot",
                     new List<Roue> { new Roue(), new Roue(), new Roue(), new Roue(), new Roue() },
