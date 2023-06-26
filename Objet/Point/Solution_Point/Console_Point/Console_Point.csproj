@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CL_Point\CL_Point.csproj" />
+  </ItemGroup>
+
 </Project>
