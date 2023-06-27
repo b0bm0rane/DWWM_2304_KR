@@ -31,6 +31,8 @@ namespace Console_CompteBancaire
 
             bool ok2 = CBToto.Transferer(15500, CBTiti);
 
+            Console.WriteLine("CBToto vers CBTiti");
+
             Console.WriteLine(CBToto.ToString());
 
             Console.WriteLine(CBTiti.ToString());

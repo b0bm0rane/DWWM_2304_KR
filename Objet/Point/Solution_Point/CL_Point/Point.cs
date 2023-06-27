@@ -32,7 +32,7 @@ namespace CL_Point
         public override string ToString()
         {
 
-            return "Abscisse : " + this.x + "|" + "Ordonnée : " + this.y;
+            return "Point  Abscisse : " + this.x + "|" + "Ordonnée : " + this.y;
         
         }
 
@@ -52,21 +52,36 @@ namespace CL_Point
             return pointSymOrdonnees;
 
         }
-        /*
+        
         public Point SymAbscisses()
         {
 
+            Point pointSymAbscisses = new Point(this.x, -this.y);
 
+            return pointSymAbscisses;
 
         }
 
-        public Point SymOrigine()
+        public Point SymOrigineS() // simple
         {
 
-            
+            Point pointSymOrigine = new Point(-this.x, -this.y);
+
+            return pointSymOrigine;
 
         }
-        */
+
+        public Point SymOrigineD() // difficile
+        {
+
+            Point pointSymOrigine = new Point(this.x, this.y);
+
+            return pointSymOrigine.SymOrdonnees();
+
+            return pointSymOrigine.SymAbscisses();
+
+        }
+        
         public void Permuter()
         {
 
