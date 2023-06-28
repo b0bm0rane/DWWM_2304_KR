@@ -6,11 +6,15 @@ namespace Console_Fraction
     {
         static void Main(string[] args)
         {
-            Fraction fraction1 = new Fraction(12, 7);
+            Fraction fraction1 = new Fraction(-120, -150);
 
             Fraction fraction2 = new Fraction();
 
             Fraction fraction3 = new Fraction(9);
+
+            Fraction fraction4 = new Fraction(2, 4);
+
+            Fraction fraction5 = new Fraction(1, 2);
 
             // Console.WriteLine(fraction1.Resultat());
 
@@ -18,15 +22,27 @@ namespace Console_Fraction
 
             //Console.WriteLine(oppose.ToString());
 
-            Console.WriteLine(fraction1.ToString());
+            //Console.WriteLine(fraction1.ToString());
 
-            Console.WriteLine(fraction1.Resultat());
+            // Console.WriteLine(fraction1.Resultat());
 
-            fraction1.Inverse();
+            // fraction1.Inverse();
 
-            Console.WriteLine(fraction1.ToString());
+            // Console.WriteLine(fraction1.ToString());
 
-            Console.WriteLine(fraction1.Resultat());
+            // Console.WriteLine(fraction1.Resultat());
+
+            Console.WriteLine(fraction4.ToString());
+
+            Console.WriteLine(fraction5.ToString());
+
+            // Console.WriteLine(fraction1.FractionReduite());
+
+            // Console.WriteLine(fraction1.ToString());
+
+            Console.WriteLine(fraction4.Divise(fraction5));
+
+            // Console.WriteLine(fraction4.ToString());
         }
     }
 }

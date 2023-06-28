@@ -29,6 +29,12 @@ namespace CL_Fraction
             this.denominateur = 1;
         }
 
+        public Fraction(Fraction fractionACloner)
+        {
+            this.numerateur = fractionACloner.numerateur;
+            this.denominateur = fractionACloner.denominateur;
+        }
+
         public override string ToString()
         {
             return this.numerateur + "/" + this.denominateur;
@@ -89,7 +95,56 @@ namespace CL_Fraction
 
         private void Reduire()
         {
+            int PGDC = this.GetPgdc();
+            this.numerateur /= PGDC;
+            this.denominateur /= PGDC;
+        }
+
+        public Fraction FractionReduite()
+        {
+            if (this.numerateur < 0 && this.denominateur < 0)
+            {
+                this.numerateur = this.numerateur * -1;
+                this.denominateur = this.denominateur * -1;
+            }
+
+            this.GetPgdc();
+            this.Reduire();
             
+            return this;
+        }
+
+        public Fraction Plus(Fraction fractionPlus)
+        {
+            int numerateurPlus = this.numerateur * fractionPlus.denominateur + this.denominateur * fractionPlus.numerateur;
+            int denominateurPlus = this.denominateur * fractionPlus.denominateur;
+
+            Fraction resultatPlus = new Fraction(numerateurPlus, denominateurPlus);
+            resultatPlus.FractionReduite();
+            return resultatPlus;
+        }
+
+        public Fraction Moins(Fraction fractionMoins)
+        {
+            Fraction fractionClone = new Fraction(fractionMoins);
+
+            fractionClone.Oppose();
+            return this.Plus(fractionClone);
+        }
+
+        public Fraction Multiplie(Fraction fractionMultiplie)
+        {
+            int numerateurMultiplie = this.numerateur * fractionMultiplie.numerateur;
+            int denominateurMultiplie = this.denominateur * fractionMultiplie.denominateur;
+
+            Fraction resultatMultiplie = new Fraction(numerateurMultiplie, denominateurMultiplie);
+            resultatMultiplie.FractionReduite();
+            return resultatMultiplie;
+        }
+
+        public Fraction Divise(Fraction fractionDivise)
+        {
+
         }
 
     }
