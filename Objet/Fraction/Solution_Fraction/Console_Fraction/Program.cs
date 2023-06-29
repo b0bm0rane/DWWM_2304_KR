@@ -22,7 +22,9 @@ namespace Console_Fraction
 
             //Console.WriteLine(oppose.ToString());
 
-            //Console.WriteLine(fraction1.ToString());
+            Console.WriteLine(fraction1.ToString());
+
+            Console.WriteLine(fraction2.ToString());
 
             // Console.WriteLine(fraction1.Resultat());
 
@@ -32,17 +34,19 @@ namespace Console_Fraction
 
             // Console.WriteLine(fraction1.Resultat());
 
-            Console.WriteLine(fraction4.ToString());
+            // Console.WriteLine(fraction4.ToString());
 
-            Console.WriteLine(fraction5.ToString());
+            // Console.WriteLine(fraction5.ToString());
 
             // Console.WriteLine(fraction1.FractionReduite());
 
             // Console.WriteLine(fraction1.ToString());
 
-            Console.WriteLine(fraction4.Divise(fraction5));
+            //Console.WriteLine(fraction4.Divise(fraction5));
 
             // Console.WriteLine(fraction4.ToString());
+            Fraction divise = fraction1.Divise(fraction2);
+            Console.WriteLine(divise.ToString());
         }
     }
 }

@@ -144,7 +144,10 @@ namespace CL_Fraction
 
         public Fraction Divise(Fraction fractionDivise)
         {
+            fractionDivise = new Fraction(fractionDivise);
 
+            fractionDivise.Oppose();
+            return this.Multiplie(fractionDivise);
         }
 
     }
