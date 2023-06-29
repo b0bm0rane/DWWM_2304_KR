@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_Jalon_29_06_2023", "Console_Jalon_29_06_2023\Console_Jalon_29_06_2023.csproj", "{8FFB1654-A06B-49B6-B56F-4410C8F322D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CL_Guerre", "CL_Guerre\CL_Guerre.csproj", "{5D5575E7-A2C1-44F9-96D4-F5DAD1A17E5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FFB1654-A06B-49B6-B56F-4410C8F322D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFB1654-A06B-49B6-B56F-4410C8F322D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFB1654-A06B-49B6-B56F-4410C8F322D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFB1654-A06B-49B6-B56F-4410C8F322D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5575E7-A2C1-44F9-96D4-F5DAD1A17E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5575E7-A2C1-44F9-96D4-F5DAD1A17E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5575E7-A2C1-44F9-96D4-F5DAD1A17E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5575E7-A2C1-44F9-96D4-F5DAD1A17E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C08399C-DF17-4E16-9F11-457748BB56F5}
+	EndGlobalSection
+EndGlobal
