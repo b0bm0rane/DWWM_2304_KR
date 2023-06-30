@@ -19,8 +19,16 @@ namespace CL_Fraction
 
         public Fraction(int _numerateur, int _denominateur)
         {
-            this.numerateur = _numerateur;
-            this.denominateur = _denominateur;
+            if (this.denominateur != 0)
+            {
+                this.numerateur = _numerateur;
+                this.denominateur = _denominateur;
+            }
+            else
+            {
+                throw new Exception("T'es con ma couille");
+            }
+            
         }
 
         public Fraction(int _numerateur)
@@ -31,8 +39,15 @@ namespace CL_Fraction
 
         public Fraction(Fraction fractionACloner)
         {
-            this.numerateur = fractionACloner.numerateur;
-            this.denominateur = fractionACloner.denominateur;
+            if (this.denominateur != 0)
+            {
+                this.numerateur = fractionACloner.numerateur;
+                this.denominateur = fractionACloner.denominateur;
+            }
+            else
+            {
+                throw new Exception("T'es con ma couille");
+            }
         }
 
         public override string ToString()
@@ -52,9 +67,16 @@ namespace CL_Fraction
 
         public void Inverse()
         {
-            int temp = this.numerateur;
-            this.numerateur = this.denominateur;
-            this.denominateur = temp;
+            if (this.denominateur != 0)
+            {
+                int temp = this.numerateur;
+                this.numerateur = this.denominateur;
+                this.denominateur = temp;
+            }
+            else
+            {
+                throw new Exception("T'es con ma couille");
+            }
         }
 
         public bool SuperieurA(Fraction fractionAComparer)
@@ -62,7 +84,7 @@ namespace CL_Fraction
             return this.Resultat() > fractionAComparer.Resultat();
         }
 
-        public bool EgalA(Fraction fractionAComparer)
+        public bool EgaleA(Fraction fractionAComparer)
         {
             return this.Resultat() == fractionAComparer.Resultat();
         }
@@ -102,16 +124,17 @@ namespace CL_Fraction
 
         public Fraction FractionReduite()
         {
-            if (this.numerateur < 0 && this.denominateur < 0)
+            Fraction fractionAReduire = new Fraction(this);
+
+            if (fractionAReduire.numerateur < 0 && fractionAReduire.denominateur < 0)
             {
-                this.numerateur = this.numerateur * -1;
-                this.denominateur = this.denominateur * -1;
+                fractionAReduire.numerateur = fractionAReduire.numerateur * -1;
+                fractionAReduire.denominateur = fractionAReduire.denominateur * -1;
             }
 
-            this.GetPgdc();
-            this.Reduire();
+            fractionAReduire.Reduire();
             
-            return this;
+            return fractionAReduire;
         }
 
         public Fraction Plus(Fraction fractionPlus)
@@ -120,8 +143,7 @@ namespace CL_Fraction
             int denominateurPlus = this.denominateur * fractionPlus.denominateur;
 
             Fraction resultatPlus = new Fraction(numerateurPlus, denominateurPlus);
-            resultatPlus.FractionReduite();
-            return resultatPlus;
+            return resultatPlus.FractionReduite();
         }
 
         public Fraction Moins(Fraction fractionMoins)
@@ -138,16 +160,35 @@ namespace CL_Fraction
             int denominateurMultiplie = this.denominateur * fractionMultiplie.denominateur;
 
             Fraction resultatMultiplie = new Fraction(numerateurMultiplie, denominateurMultiplie);
-            resultatMultiplie.FractionReduite();
-            return resultatMultiplie;
+            return resultatMultiplie.FractionReduite();
         }
 
         public Fraction Divise(Fraction fractionDivise)
         {
-            fractionDivise = new Fraction(fractionDivise);
+            Fraction fractionClone = new Fraction(fractionDivise);
 
-            fractionDivise.Oppose();
-            return this.Multiplie(fractionDivise);
+            fractionClone.Oppose();
+            return this.Multiplie(fractionClone);
+        }
+
+        public static Fraction operator +(Fraction a, Fraction b)
+        {
+            return a.Plus(b);
+        }
+
+        public static Fraction operator -(Fraction a, Fraction b)
+        {
+            return a.Moins(b);
+        }
+
+        public static Fraction operator *(Fraction a, Fraction b)
+        {
+            return a.Multiplie(b);
+        }
+
+        public static Fraction operator /(Fraction a, Fraction b)
+        {
+            return a.Divise(b);
         }
 
     }

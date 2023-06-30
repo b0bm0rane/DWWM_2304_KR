@@ -6,7 +6,7 @@ namespace Console_Fraction
     {
         static void Main(string[] args)
         {
-            Fraction fraction1 = new Fraction(-120, -150);
+            Fraction fraction1 = new Fraction(-120, 0);
 
             Fraction fraction2 = new Fraction();
 
@@ -45,8 +45,13 @@ namespace Console_Fraction
             //Console.WriteLine(fraction4.Divise(fraction5));
 
             // Console.WriteLine(fraction4.ToString());
-            Fraction divise = fraction1.Divise(fraction2);
-            Console.WriteLine(divise.ToString());
+            //Fraction divise = fraction1.Divise(fraction2);
+            //Console.WriteLine(divise.ToString());
+
+            Fraction surcharge = fraction1 + fraction2;
+            Console.WriteLine(surcharge.ToString());
+
+
         }
     }
 }
