@@ -1,0 +1,5 @@
+SELECT MAX(SAL), dname 
+FROM emp 
+INNER JOIN dept 
+ON dept.DEPTNO = emp.DEPTNO 
+GROUP BY dept.DEPTNO;

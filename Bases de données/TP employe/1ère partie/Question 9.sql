@@ -1,0 +1,5 @@
+SELECT ENAME, DNAME 
+FROM emp 
+JOIN dept 
+ON emp.DEPTNO = dept.DEPTNO 
+WHERE ENAME = "ALLEN";

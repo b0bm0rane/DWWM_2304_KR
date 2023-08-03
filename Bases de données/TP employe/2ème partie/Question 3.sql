@@ -1,0 +1,3 @@
+SELECT * 
+FROM emp 
+WHERE IFNULL (COMM,0);
