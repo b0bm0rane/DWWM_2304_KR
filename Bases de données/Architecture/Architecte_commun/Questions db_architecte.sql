@@ -27,13 +27,16 @@ JOIN employes ON employes.emp_matricule = projets.emp_matricule;
 			
 /* 6. Sélectionner tous les projets (dates, superficies, prix) avec le nombre d'intervenants autres que le client et l'architecte */
 
-USE db_architecte;
-
-SELECT projet_date_depot, projet_date_fin_prevue, projet_date_fin_effective, projet_superficie_totale, projet_superficie_batie, projet_prix, emp_nom FROM projets 
+SELECT 	projets.projet_ref, projet_date_depot, projet_date_fin_prevue, 
+			projet_date_fin_effective, projet_superficie_totale, projet_superficie_batie, 
+			projet_prix, emp_nom, COUNT(participer.emp_matricule) FROM projets 
 JOIN participer ON participer.projet_ref = projets.projet_ref 
-JOIN employes ON employes.emp_matricule = projets.emp_matricule;
+JOIN employes ON employes.emp_matricule = projets.emp_matricule
+GROUP BY projet_ref;
 
 /* 7. Sélectionner les types de projets avec, pour chacun d'entre eux, le nombre de projets associés et le prix moyen pratiqué */
+
+USE db_architecte;
 
 
 
