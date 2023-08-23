@@ -10,7 +10,7 @@ DROP PROCEDURE if EXISTS anciennete_employe;
 
 
 
--- Quels sont les noms, prenoms, matricules des architectes parmis les employes ? 
+-- 1)   Quels sont les noms, prenoms, matricules des architectes parmis les employes ? 
 
 DELIMITER |
 
@@ -26,13 +26,16 @@ DELIMITER ;
 
 CALL recherche_emp_architecte();
 
--- Renvoyer la liste des salaries pour une fonction donnee en parametre
+
+
+-- 2)   Renvoyer la liste des salaries pour une fonction donnee en parametre
 
 DELIMITER |
 
 				CREATE PROCEDURE if NOT EXISTS recherche_emp_par_fonction(IN p_fonction_nom VARCHAR(50))
 				BEGIN
-				SELECT employes.emp_nom, employes.emp_prenom, employes.emp_date_embauche FROM employes JOIN fonctions ON fonctions.fonction_id = employes.fonction_id
+				SELECT employes.emp_nom, employes.emp_prenom, employes.emp_date_embauche FROM employes 
+				JOIN fonctions ON fonctions.fonction_id = employes.fonction_id
 				WHERE fonctions.fonction_nom = p_fonction_nom;
 				END|
 
@@ -41,7 +44,9 @@ DELIMITER ;
 SET @fonction_nom := 'dessinateur';
 CALL recherche_emp_par_fonction(@fonction_nom);
 
-Renvoyer le nombre effectif en variable de sortie pour une fonction donnee en parametre
+
+
+-- 3)   Renvoyer le nombre effectif en variable de sortie pour une fonction donnee en parametre
 
 DELIMITER |
 
@@ -58,24 +63,38 @@ SET @fonction_nom := 'dessinateur';
 CALL nombre_effectif_par_fonction(@fonction_nom, @nombre_effectif_par_fonction);
 SELECT @nombre_effectif_par_fonction;
 
--- Creer une procedure stockee qui affiche la liste des projets (projet_ref, date de fin prevue, projet_prix) pour un nom d employe en entree
+
+
+-- 4)   Creer une procedure stockee qui affiche la liste des projets (projet_ref, date de fin prevue, projet_prix) pour un nom d employe en entree
 
 DELIMITER |
 
-				CREATE PROCEDURE if NOT EXISTS liste_projets_pour_un_employe
+				CREATE PROCEDURE if NOT EXISTS liste_projets_pour_un_employe(IN p_emp_nom VARCHAR(50))
 				BEGIN
-				
+				SELECT projets.projet_ref, projets.projet_date_fin_prevue, projets.projet_prix FROM projets 
+				JOIN employes ON employes.emp_matricule = projets.emp_matricule
+				WHERE employes.emp_nom = p_emp_nom;
 				END|
 
 DELIMITER ;
 
--- Creer une proceduree stockee qui prend le nom d un salarie en entree et qui renvoie son anciennete en annees dans une variable (out)
+SET @emp_nom := 'roussotte';
+CALL liste_projets_pour_un_employe(@emp_nom);
+
+
+
+-- 5)   Creer une proceduree stockee qui prend le nom d un salarie en entree et qui renvoie son anciennete en annees dans une variable (out)
 
 DELIMITER |
 
-				CREATE PROCEDURE if NOT EXISTS anciennete_employe
+				CREATE PROCEDURE if NOT EXISTS anciennete_employe(IN p_emp_nom VARCHAR(50), OUT p_anciennete INT)
 				BEGIN
-				
+				SELECT TIMESTAMPDIFF(YEAR, employes.emp_date_embauche, CURDATE()) INTO p_anciennete FROM employes
+				WHERE employes.emp_nom = p_emp_nom;
 				END|
 
 DELIMITER ;
+
+SET @emp_nom := 'desplanques';
+CALL anciennete_employe(@emp_nom, @anciennete);
+SELECT @anciennete;
