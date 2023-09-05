@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon 1er formulaire</title>
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <h2>Votre compte configuré en 2 minutes !</h2>
+    <form action="" method="GET">
+        <div>
+            <fieldset>
+                <legend>État civil</legend>
+                <div>
+                    <label for="nomUtilisateur"> Nom :</label>
+                    <input type="text" id="nomUtilisateur" name="nom">
+                </div>
+                <div>
+                    <label for="prenomUtilisateur"> Prénom :</label>
+                    <input type="text" id="prenomUtilisateur" name="prenom">
+                </div>
+                <label for="dateDeNaissanceUtilisateur"> Date de naissance :</label>
+                <input type="date" id="dateDeNaissanceUtilisateur" name="dateDeNaissanceUtilisateur">
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Informations de contact</legend>
+                <div>
+                    <label for="emailUtilisateur"> Adresse Email :</label>
+                    <input type="email" id="emailUtilisateur" name="email">
+                </div>
+                <label for="telephoneUtilisateur"> Téléphone :</label>
+                <input type="tel" id="telephoneUtilisateur" name="telephone">
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <div>
+                    <input type="checkbox" id="conditionsUtilisation" name="conditions_utilisation">
+                    <label for="conditionsUtilisation"> J'accepte les </label>
+                    <a href="conditionsUtilisation">conditions d'utilisation</a>
+                </div>
+                <button type="submit">S'inscrire</button>
+            </fieldset>
+        </div>
+    </form>
+</body>
+</html>
