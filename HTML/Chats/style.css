@@ -1,0 +1,54 @@
+body{
+    margin : 0px;
+    padding : 0px;
+    font-family : arial;
+}
+
+header{
+    display : flex;
+    justify-content : center;
+    background-color:rgb(230, 75, 60);
+}
+
+h1{
+    margin : 0px;
+    margin-top : 20px;
+    margin-bottom: 20px;
+    
+    color: white;
+}
+
+h2{
+    color :rgb(230, 75, 60);
+    margin : 0px;
+}
+main{
+    display : flex;
+    justify-content : center;
+    border : 0px;
+    margin : 0px;
+    padding-top : 30px;
+    background-color: rgb(235, 240, 240);
+}
+
+.colonne{
+    width: 300px;
+    margin : 10px;
+}
+
+.cover{
+    height : 250px;
+}
+
+img{
+    object-fit : cover;
+    height : 250px;
+    width : 300px;
+
+}
+
+.texte{
+    background-color: white;
+    padding : 20px;
+    height: 350px;
+}
