@@ -1,3 +1,8 @@
+@font-face{
+    font-family: "channel-regular";
+    src: url("../TP_Vignoble/fonts/channel-webfont.woff")format("woff");
+}
+
 body{
     background-image: url("../TP_Vignoble/images/bg_motif.gif");
     background-repeat: repeat;
@@ -16,13 +21,62 @@ header{
     font-family: "channel-regular";
 }
 
-header nav>ul{
+
+
+/*
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+    /* float: right; aligner à droite 
+    padding-top: 25px;
+    padding-right: 60px;
+}
+
+header nav ul li{
+    margin: 10px;
+}
+
+header nav ul li ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+*/
+
+
+
+header nav > ul{
     float: right;
     padding-top: 25px;
     padding-right: 60px;
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-left: 55px;
+    position: relative;
+    line-height: 50px;
 }
 
 header nav ul li a{
     color: #fff;
     text-decoration: none;
+}
+
+header nav ul li ul{
+    position: absolute;
+    display: none;
+    top: 50px;
+    left: 100px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
 }
