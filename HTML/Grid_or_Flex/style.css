@@ -1,0 +1,14 @@
+body{
+    margin : 0px;
+    padding : 0px;
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.section{
+    color: white;
+    background-color: #CCCC33;
+}
