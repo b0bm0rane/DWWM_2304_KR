@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -18,6 +18,57 @@
         </div>
         <div>
             <label for="emailClient">Email</label>
+            <input type="email" id="emailClient" name="email">
+        </div>
+        <div>
+            <fieldset>
+                <legend>Which service do you require ? </legend>
+                <div>
+                    <input type="radio" id="plumbing" name="plumbing">
+                    <label for="plumbing">Plumbing</label>
+                    <input type="radio" id="electricity" name="electricity">
+                    <label for="electricity">Electricity</label>
+                    <input type="radio" id="painting" name="painting">
+                    <label for="painting">Painting</label>
+                </div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Which other service do you need ? </legend>
+                <div>
+                    <input type="checkbox" id="architect" name="architect">
+                    <label for="architect">Architect</label>
+                    <input type="checkbox" id="disinfection" name="disinfection">
+                    <label for="disinfection">Disinfection</label>
+                    <input type="checkbox" id="rat_extermination" name="rat_extermination">
+                    <label for="rat_extermination">Rat extermination</label>
+                </div>
+            </fieldset>
+        </div>
+        <div>
+            <label for="date">Date/Time</label>
+            <input type="date" id="date" name="Date_Time">
+        </div>
+        <div>
+            <label for="place">Place</label>
+            <select id="place" name="place">
+                <option value="">Select One</option>
+                <option value="">Main office (Paris)</option>
+                <option value="">Technical center (Lille)</option>
+                <option value="">Logistic center (Amiens)</option>
+            </select>
+        </div>
+        <div>
+            <label for="other">Other needs</label>
+            <input type="text" id="other" name="other_needs">
+        </div>
+        <div>
+            <label for="instructions">Special Instructions</label>
+            <input type="text" id="instructions" name="special_instructions">
+        </div>
+        <div>
+            <button type="submit" id="submit">Submit</button>
         </div>
     </main>
 </body>

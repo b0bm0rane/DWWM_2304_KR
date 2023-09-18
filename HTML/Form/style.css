@@ -1,0 +1,14 @@
+body{
+    margin : 0px;
+    padding : 0px;
+    font-family : arial;
+}
+
+main{
+    background-color: #33AAFF;
+    width: 500px;
+}
+#submit{
+    color: white;
+    background-color: #333333;
+}
