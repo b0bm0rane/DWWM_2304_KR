@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date & Heure</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <main>
-        <fieldset>
-            <legend>Date & Heure</legend>
-            <label for="ma date">Date : </label>
-            <input type="text" id="date" name="date">
-            <label for="mon heure">Heure : </label>
-            <input type="text" id="heure" name="heure">
-        </fieldset>
-    </main>
+        <form action="#" method="get" enctype="text/plain">
+            <fieldset>
+                <legend>Date & Heure</legend>
+                <label for="maDate" class="monLabel">Date : </label>
+                <input type="text" name="maDate" id="maDate" size="12" maxlength="10" value="">
+                <input type="button" value="afficher date" id="btndate" name="btndate"> <br>
+                <label for="monHeure" class="monLabel">Heure : </label>
+                <input type="text" name="monHeure" id="monHeure" size="12" maxlength="10" value="">
+                <input type="button" value="afficher heure" id="btnheure" name="btnheure"> <br>
+            </fieldset>
+        </form>
 </body>
+<script src="Script.js"></script>
 </html>

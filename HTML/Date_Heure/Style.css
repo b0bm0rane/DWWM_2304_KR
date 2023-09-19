@@ -1,0 +1,24 @@
+.monLabel{
+    padding: 10px;
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.monLabel:first-child{
+    margin-top: 50px;
+}
+
+fieldset{
+    background-color: pink;
+    width: 30%;
+    border-radius: 12px;
+}
+
+legend{
+    font-size: 1.8em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 5px 5px 8px #222;
+    color: yellow;
+}
