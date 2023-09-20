@@ -1,0 +1,72 @@
+*{
+    padding: none;
+    margin: none;
+    block-size: box-size;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 250px auto auto;
+    grid-template-areas: 
+    "chanel icones"
+    "menu menu"
+    "tim tim";
+    border-top: 10px solid black;
+}
+
+header > h1{
+    grid-area: chanel;
+    text-align: center;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu{
+        justify-content: space-around;
+        grid-area: menu;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.icone{
+    display: block;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.listeIcone{
+    display: flex;
+    grid-area: icones;
+    list-style: none;
+}
+
+#texteBleu{
+    z-index: 1;
+    position: absolute;
+    left: 200px;
+    top: 250px;
+    grid-area: tim;
+    width: 500px;
+}
+
+#tim{
+    display: block;
+    position: absolute; /*position absolue(prends le plus grand conteneur)*/
+    grid-area: tim;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.photo{
+    position: relative; /*position absolue dans un bloc donné (relatif)*/
+    grid-area: tim;
+}
