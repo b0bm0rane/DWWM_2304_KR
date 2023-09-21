@@ -1,3 +1,114 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: none;
+    margin: none;
+    block-size: box-size;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    grid-template-rows: 200px 1fr;
+   grid-template-areas: 
+    "hd hd hd"
+    "menu article pub";
+}
+
 header{
-    height: 200px;
+    background-image: url(/Basic_Template/Images/basic-template-banner\ \(1\).png);
+    background-repeat: no-repeat;
+    color: white;
+    grid-area: hd;
+    width: 100%;
+    text-align: center;
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto;
+    grid-template-areas: 
+    "menu1"
+    "navigation";
+    grid-area: menu;
+    background-color: #cccccc;
+}
+
+main{
+    display: grid;
+    background-color: #e0e0e0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto;
+    grid-template-areas: 
+    "bienvenue"
+    "articles";
+    grid-area: article;
+}
+
+main > h2{
+    background-color: #cccccc;
+    margin: 0;
+}
+
+#pub{
+    grid-area: pub;
+    display: grid;
+    background-color: #cccccc;
+
+}
+
+#livre{
+    width: 240px;
+}
+
+#listeMenu{
+    display: grid;
+    list-style: none;
+    padding-left: 20px;
+    grid-area: navigation;
+
+}
+
+a{
+    text-decoration: none;
+    background-color: #969292;
+}
+
+#bienvenue1{
+    grid-area: bienvenue;
+}
+
+#listeArticles{
+    display: grid;
+    display: flex;
+    gap: 20px;
+flex-wrap: wrap;
+    list-style: none;
+}
+
+#menu1{
+    grid-area: menu1;
+    padding-left: 20px;
+    margin: 0;
+}
+
+#achat{
+    text-align: center;
+    color: white;
+    background-color: #085E8F;
+}
+
+#publi{
+    color: #085E8F;
+    text-align: center;
+}
+
+#listeArticles > li{
+    height: 120px;
+    width: 600px;
+    color: white;
+    background-color: #969292;
+}
+
+#listeMenu > li{
 }
