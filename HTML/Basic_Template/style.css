@@ -5,6 +5,10 @@
     block-size: box-size;
 }
 
+
+
+
+
 body{
     display: grid;
     grid-template-columns: 240px 1fr 240px;
@@ -14,25 +18,23 @@ body{
     "menu article pub";
 }
 
+
+
+
+
 header{
     background-image: url(/Basic_Template/Images/basic-template-banner\ \(1\).png);
     background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     grid-area: hd;
     width: 100%;
     text-align: center;
 }
 
-#menu{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px auto;
-    grid-template-areas: 
-    "menu1"
-    "navigation";
-    grid-area: menu;
-    background-color: #cccccc;
-}
+
+
+
 
 main{
     display: grid;
@@ -50,65 +52,90 @@ main > h2{
     margin: 0;
 }
 
-#pub{
-    grid-area: pub;
-    display: grid;
-    background-color: #cccccc;
-
-}
-
-#livre{
-    width: 240px;
-}
-
-#listeMenu{
-    display: grid;
-    list-style: none;
-    padding-left: 20px;
-    grid-area: navigation;
-
-}
-
-a{
-    text-decoration: none;
-    background-color: #969292;
-}
-
 #bienvenue1{
+    display: flex;
     grid-area: bienvenue;
+    align-items: center;
 }
 
 #listeArticles{
-    display: grid;
     display: flex;
-    gap: 20px;
-flex-wrap: wrap;
+    flex-wrap: wrap;
     list-style: none;
-}
-
-#menu1{
-    grid-area: menu1;
-    padding-left: 20px;
-    margin: 0;
-}
-
-#achat{
-    text-align: center;
-    color: white;
-    background-color: #085E8F;
-}
-
-#publi{
-    color: #085E8F;
-    text-align: center;
+    justify-content: space-evenly;
 }
 
 #listeArticles > li{
+    font-size: larger;
     height: 120px;
     width: 600px;
     color: white;
     background-color: #969292;
 }
 
-#listeMenu > li{
+
+
+
+
+#menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto;
+    grid-template-areas: 
+    "menu1"
+    "navigation";
+    grid-area: menu;
+    background-color: #cccccc;
+}
+
+#menu1{
+    display: flex;
+    background-color: #969292;
+    grid-area: menu1;
+    padding-left: 20px;
+    margin: 0;
+    align-items: center;
+}
+
+#listeMenu{
+    list-style: none;
+    grid-area: navigation;
+    padding: 0px;
+}
+
+#listeMenu li{
+    font-size: larger;
+    margin-top: 10px;
+    background-color: #969292;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+#pub{
+    grid-area: pub;
+    display: grid;
+    background-color: #cccccc;
+}
+
+#publi{
+    font-size: larger;
+    color: #085E8F;
+    text-align: center;
+}
+
+#livre{
+    width: 240px;
+}
+
+#achat{
+    font-size: larger;
+    text-align: center;
+    color: white;
+    background-color: #085E8F;
 }

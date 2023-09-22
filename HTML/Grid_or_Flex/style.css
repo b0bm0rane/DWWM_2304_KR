@@ -1,14 +1,71 @@
 body{
     margin : 0px;
     padding : 0px;
-    height: 100vh;
+    width: 98%;
+    height: 95vh;
     display: grid;
     gap: 10px;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    "un un un un"
+    "deux trois quatre quatre"
+    "deux cinq cinq six"
+    "deux sept huit neuf"
+    "deux dix dix dix";
 }
 
 .section{
     color: white;
     background-color: #CCCC33;
+}
+
+#section_1{
+    display: grid;
+    grid-area: un;
+}
+
+#section_2{
+    display: grid;
+    grid-area: deux;
+}
+
+#section_3{
+    display: grid;
+    grid-area: trois;
+}
+
+#section_4{
+    display: grid;
+    grid-area: quatre;
+}
+
+#section_5{
+    display: grid;
+    grid-area: cinq;
+}
+
+#section_6{
+    display: grid;
+    grid-area: six;
+}
+
+#section_7{
+    display: grid;
+    grid-area: sept;
+}
+
+#section_8{
+    display: grid;
+    grid-area: huit;
+}
+
+#section_9{
+    display: grid;
+    grid-area: neuf;
+}
+
+#section_10{
+    display: grid;
+    grid-area: dix;
 }
