@@ -1,0 +1,19 @@
+fieldset{
+    width: 40%;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgb(241, 233, 215);
+}
+header{
+    text-align: center;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+select{
+    margin-bottom: 20px;
+}
