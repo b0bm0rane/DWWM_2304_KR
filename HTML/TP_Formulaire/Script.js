@@ -16,6 +16,7 @@ function valNum(_chaine) {
 
 }
 
+
 function calculerSigne(_mois) {
 
     let signe = "";
@@ -28,6 +29,57 @@ function calculerSigne(_mois) {
 
 }
 
-// TEST
+function formok(){
 
+    let nom = document.getElementById("nom");
+    
+    let prenom = document.getElementById("prenom");
+    
+    let mail = document.getElementById("mail");
+
+    let jours = document.getElementById("jours");
+
+    let mois = document.getElementById("mois");
+
+    let annees = document.getElementById("annees");
+
+    if(
+        nom.value != ""
+        && prenom.value != ""
+        && mail.value != ""
+        && jours.value != "Choisissez votre jour"
+        && mois.value != "Choisissez votre mois"
+        && annees.value != "Choisissez votre année"
+    ) {
+
+        return true;
+
+    }
+
+    return false;
+}
+
+function calculerPseudo() {
+
+    if (formok){
+
+        pseudo = signe "+" (valNum(prenom) + valNum(nom));
+
+        return pseudo;
+    }
+
+}
+
+// TEST 
+console.log(valNum("kevin"));
+
+
+
+
+// TEST
 console.log(calculerSigne(1));
+
+
+
+
+console.log(formok());
