@@ -21,7 +21,7 @@ function calculerSigne(_mois) {
 
     let signe = "";
 
-    let signesParMois = ["Capricorne","Verseau","Poisson","Belier","Taureau","Gémeaux","Cancer","Lion","Vierge","Balance","Scorpion","Sagittaire"];
+    let signesParMois = ["Capricorne","Verseau","Poisson","Belier","Taureau","Gémeaux","Cancer","Lion","Vierge","Balance","Scorpion","Sagitaire"];
 
     signe = signesParMois[_mois - 1];
 
@@ -61,25 +61,112 @@ function formok(){
 
 function calculerPseudo() {
 
-    if (formok){
+    let pseudo = document.getElementById("pseudo");
 
-        pseudo = signe "+" (valNum(prenom) + valNum(nom));
+    let boutonValider = document.getElementById("validation");
 
-        return pseudo;
+    if (formok() == true){
+
+        let mois = document.getElementById("mois").value;
+        let nom = document.getElementById("nom").value;
+        let prenom = document.getElementById("prenom").value;
+
+        let valeurPseudo = calculerSigne(mois) + (valNum(nom) + valNum(prenom));
+
+        pseudo.value = valeurPseudo;
+
+        boutonValider.disabled = false;
+
+    }
+    else {
+
+        boutonValider.disabled = true;
+
     }
 
 }
+
+function valider(){
+
+    let tableauInputs = document.querySelectorAll(".donnees");
+
+    for(let i = 0; i < tableauInputs.length; i++) {
+
+        document.cookie = tableauInputs[i].id + "=" + tableauInputs[i].value;
+
+    }
+
+    console.log("C'est ok !");
+
+}
+
+function redirection(){
+    document.location.href="Accueil.html"
+}
+
+function getCookie(){
+    
+}
+
+// AJOUT D'ECOUTEURS
+
+let inputs = []; /* = let */
+inputs = document.querySelectorAll("input");
+inputs.forEach(element => element.addEventListener("input", calculerPseudo));
+
+let selects = [];
+selects = document.querySelectorAll("select");
+selects.forEach(selection => selection.addEventListener("change", calculerPseudo));
+
+let validation = document.getElementById("validation");
+validation.addEventListener("click", valider);
+
+/*
+(function (x) { return 2 * x });
+x => 2 * x;
+
+function double(x) {
+    return 2 * x;
+}
+
+double
+
+*/
 
 // TEST 
 console.log(valNum("kevin"));
 
 
 
-
-// TEST
+// TEST 
 console.log(calculerSigne(1));
 
 
 
-
+// TEST 
 console.log(formok());
+
+
+
+// TEST 
+console.log(calculerPseudo());
+
+function recupererCookie(_cle) {
+
+    let valeur = "";
+
+    let tabCookies = document.cookie.split("; ");
+    for(let i = 0; i < tabCookies.length; i++) {
+
+        let tabValeur = tabCookies[i].split("=");
+        if(tabValeur[0] == _cle) {
+
+            valeur = tabValeur[1];
+
+        }
+
+    }
+
+    return valeur;
+
+}
