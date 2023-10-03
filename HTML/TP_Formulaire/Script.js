@@ -101,11 +101,29 @@ function valider(){
 }
 
 function redirection(){
+
     document.location.href="Accueil.html"
+
 }
 
-function getCookie(){
-    
+function getCookie(_cle){
+
+    let valeur = "";
+
+    let tabCookies = document.cookie.split("; ");
+    tabCookies.forEach(element => {
+
+        let tabValeur = element.split("=");
+        if(tabValeur[0] == _cle) {
+
+            valeur = tabValeur[1];
+
+        }
+
+    })
+
+    return valeur;
+
 }
 
 // AJOUT D'ECOUTEURS
@@ -122,6 +140,7 @@ let validation = document.getElementById("validation");
 validation.addEventListener("click", valider);
 
 /*
+
 (function (x) { return 2 * x });
 x => 2 * x;
 
@@ -133,23 +152,7 @@ double
 
 */
 
-// TEST 
-console.log(valNum("kevin"));
-
-
-
-// TEST 
-console.log(calculerSigne(1));
-
-
-
-// TEST 
-console.log(formok());
-
-
-
-// TEST 
-console.log(calculerPseudo());
+/*
 
 function recupererCookie(_cle) {
 
@@ -170,3 +173,89 @@ function recupererCookie(_cle) {
     return valeur;
 
 }
+
+*/
+
+/*
+
+function getCookie(_cle) {
+    
+    let valeur = "";
+
+    let tabCookies = document.cookie.split("; ");
+    for(let i = 0; i < tabCookies.length; i++) {
+
+        let tabValeur = tabCookies[i].split("=");
+        if(tabValeur[0] == _cle) {
+
+            valeur = tabValeur[1];
+
+        }
+
+    }
+
+    return valeur;
+
+}*/
+
+// TEST 
+console.log(valNum("kevin"));
+
+
+
+// TEST 
+console.log(calculerSigne(1));
+
+
+
+// TEST 
+console.log(formok());
+
+
+
+// TEST 
+console.log(calculerPseudo());
+
+// TEST
+
+console.log(getCookie("pseudo"));
+
+console.log(document.cookie);
+
+//41% 09h13 
+
+// 50% 09h18 
+
+// 58% 09h23 
+
+// 73% 09h33 
+
+// 84% 09h43 
+
+// 91% 09h53 
+
+//+10
+
+// 97% 10h08
+
+// % 10h13
+
+
+
+
+/*
+
+monTableau : ENTIER[]
+i : ENTIER
+
+
+POUR i ALLANT DE 0 à |monTableau| EXCLU
+    // actions (l'élément est monTableau[i])
+FIN POUR
+
+POUR CHAQUE élément DANS monTableau
+    // actions (l'élément est élément)
+FIN POUR CHAQUE
+
+
+*/
