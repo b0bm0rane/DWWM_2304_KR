@@ -150,9 +150,7 @@ function double(x) {
 
 double
 
-*/
-
-/*
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function recupererCookie(_cle) {
 
@@ -174,9 +172,7 @@ function recupererCookie(_cle) {
 
 }
 
-*/
-
-/*
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function getCookie(_cle) {
     
@@ -222,27 +218,6 @@ console.log(getCookie("pseudo"));
 
 console.log(document.cookie);
 
-//41% 09h13 
-
-// 50% 09h18 
-
-// 58% 09h23 
-
-// 73% 09h33 
-
-// 84% 09h43 
-
-// 91% 09h53 
-
-//+10
-
-// 97% 10h08
-
-// % 10h13
-
-
-
-
 /*
 
 monTableau : ENTIER[]
@@ -257,5 +232,25 @@ POUR CHAQUE élément DANS monTableau
     // actions (l'élément est élément)
 FIN POUR CHAQUE
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function nbJoursAnniv(dateAnnivStr)
+{
+    var dateActuelle = new Date();
+    var tabDateAnniv = dateAnnivStr.split('/');
+    var jourAnniv = new Date(dateActuelle.getFullYear(), tabDateAnniv[1]-1,tabDateAnniv[0]);
+    
+    if (jourAnniv < dateActuelle)
+    {   
+        jourAnniv.setFullYear(dateActuelle.getFullYear()+1);
+        var diff = jourAnniv-dateActuelle;
+    }
+    else
+    {       
+        var diff =  jourAnniv-dateActuelle;
+    }
+    var retour = Math.floor(diff / (1000*60*60*24));
+    return retour;
+}
 
 */
