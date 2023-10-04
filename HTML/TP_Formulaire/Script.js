@@ -47,9 +47,9 @@ function formok(){
         nom.value != ""
         && prenom.value != ""
         && mail.value != ""
-        && jours.value != "Choisissez votre jour"
-        && mois.value != "Choisissez votre mois"
-        && annees.value != "Choisissez votre année"
+        && jours.value != "0"
+        && mois.value != "0"
+        && annees.value != "0"
     ) {
 
         return true;
@@ -96,6 +96,8 @@ function valider(){
 
     }
 
+    document.cookie = "nbJoursAnniv=" + nbJoursAnniv() + ";"; 
+
     console.log("C'est ok !");
 
 }
@@ -126,6 +128,27 @@ function getCookie(_cle){
 
 }
 
+function nbJoursAnniv(){
+
+    let jourAnniv = document.getElementById("jours").value;
+    let moisAnniv = document.getElementById("mois").value - 1;
+    let anneeAnniv = document.getElementById("annees").value;
+
+    let dateAnniv = new Date(anneeAnniv, moisAnniv, jourAnniv);
+
+    let dateAuj = new Date();
+
+    let dureeMs = dateAuj - dateAnniv;
+    console.log(dureeMs);
+
+    let dureeEnJour = Math.floor(dureeMs / (1000 * 60 * 60 * 24));
+    console.log(dureeEnJour);
+
+
+    return dureeEnJour;
+
+}
+
 // AJOUT D'ECOUTEURS
 
 let inputs = []; /* = let */
@@ -138,6 +161,8 @@ selects.forEach(selection => selection.addEventListener("change", calculerPseudo
 
 let validation = document.getElementById("validation");
 validation.addEventListener("click", valider);
+
+
 
 /*
 
@@ -195,28 +220,7 @@ function getCookie(_cle) {
 }*/
 
 // TEST 
-console.log(valNum("kevin"));
 
-
-
-// TEST 
-console.log(calculerSigne(1));
-
-
-
-// TEST 
-console.log(formok());
-
-
-
-// TEST 
-console.log(calculerPseudo());
-
-// TEST
-
-console.log(getCookie("pseudo"));
-
-console.log(document.cookie);
 
 /*
 
