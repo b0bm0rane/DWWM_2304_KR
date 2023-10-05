@@ -132,12 +132,41 @@ function nbJoursAnniv(){
 
     let jourAnniv = document.getElementById("jours").value;
     let moisAnniv = document.getElementById("mois").value - 1;
+
+    let dateAnniv = new Date(moisAnniv, jourAnniv)
+    let dateAuj = new Date(getMonth(), getDay());
+
+    if (dateAnniv < dateAujourdhui){
+
+        let dureeMs = dateAuj - dateAnniv;
+            console.log(dureeMs);
+
+    }
+
+    else if (dateAnniv > dateAujourdhui){
+
+        let dureeMs = dateAnniv - dateAujourdhui;
+            console.log(dureeMs);
+
+    }
+    
+    let dureeEnJour = Math.floor(dureeMs / (1000 * 60 * 60 * 24));
+    console.log(dureeEnJour);
+
+
+    
+
+    
+    
+    /*
+    let jourAnniv = document.getElementById("jours").value;
+    let moisAnniv = document.getElementById("mois").value - 1;
     let anneeAnniv = document.getElementById("annees").value;
 
     let dateAnniv = new Date(anneeAnniv, moisAnniv, jourAnniv);
 
     let dateAuj = new Date();
-
+    
     let dureeMs = dateAuj - dateAnniv;
     console.log(dureeMs);
 
@@ -146,7 +175,7 @@ function nbJoursAnniv(){
 
 
     return dureeEnJour;
-
+    */
 }
 
 // AJOUT D'ECOUTEURS
