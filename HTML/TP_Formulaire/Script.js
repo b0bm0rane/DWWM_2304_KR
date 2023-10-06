@@ -132,41 +132,14 @@ function nbJoursAnniv(){
 
     let jourAnniv = document.getElementById("jours").value;
     let moisAnniv = document.getElementById("mois").value - 1;
-
-    let dateAnniv = new Date(moisAnniv, jourAnniv)
-    let dateAuj = new Date(getMonth(), getDay());
-
-    if (dateAnniv < dateAujourdhui){
-
-        let dureeMs = dateAuj - dateAnniv;
-            console.log(dureeMs);
-
-    }
-
-    else if (dateAnniv > dateAujourdhui){
-
-        let dureeMs = dateAnniv - dateAujourdhui;
-            console.log(dureeMs);
-
-    }
-    
-    let dureeEnJour = Math.floor(dureeMs / (1000 * 60 * 60 * 24));
-    console.log(dureeEnJour);
-
-
-    
-
-    
-    
-    /*
-    let jourAnniv = document.getElementById("jours").value;
-    let moisAnniv = document.getElementById("mois").value - 1;
     let anneeAnniv = document.getElementById("annees").value;
 
     let dateAnniv = new Date(anneeAnniv, moisAnniv, jourAnniv);
 
     let dateAuj = new Date();
     
+if
+
     let dureeMs = dateAuj - dateAnniv;
     console.log(dureeMs);
 
@@ -175,7 +148,7 @@ function nbJoursAnniv(){
 
 
     return dureeEnJour;
-    */
+
 }
 
 // AJOUT D'ECOUTEURS
@@ -190,8 +163,6 @@ selects.forEach(selection => selection.addEventListener("change", calculerPseudo
 
 let validation = document.getElementById("validation");
 validation.addEventListener("click", valider);
-
-
 
 /*
 
@@ -284,6 +255,115 @@ function nbJoursAnniv(dateAnnivStr)
     }
     var retour = Math.floor(diff / (1000*60*60*24));
     return retour;
+}
+
+*/
+
+/* 
+
+FRANCK 
+
+function nbJoursAnniv(dateAnnivStr)
+{
+    var dateActuelle = new Date();
+    var tabDateAnniv = dateAnnivStr.split('/');
+    var jourAnniv = new Date(dateActuelle.getFullYear(), tabDateAnniv[1]-1,tabDateAnniv[0]);
+    
+    if (jourAnniv < dateActuelle)
+    {   
+        jourAnniv.setFullYear(dateActuelle.getFullYear()+1);
+        var diff = jourAnniv-dateActuelle;
+    }
+    else
+    {       
+        var diff =  jourAnniv-dateActuelle;
+    }
+    var retour = Math.floor(diff / (1000*60*60*24));
+    return retour;
+}
+
+SAÏD 
+
+function ecrireAccueil(){
+
+    if(getCookie('nom') != null){
+
+        document.querySelector('#cell_nom').textContent = getCookie('nom')
+
+        document.querySelector('#cell_prenom').textContent = getCookie('prenom')
+
+        document.querySelector('#cell_dateNaissance').textContent = getCookie('date_naissance')
+
+        document.querySelector('#cell_pseudo').textContent = getCookie('pseudo')
+
+        let chaineDate =  getCookie('date_naissance')
+
+        document.querySelector("#cell_nbJours").textContent = nbJoursAnniv(chaineDate)
+
+    }
+
+   
+
+}
+
+ecrireAccueil();
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SAÏD
+
+function nbJoursAnniv(chaineDate) {
+
+    let dateJour = new Date(); // récupérer la date du jour
+
+    console.log("dateJour : " + dateJour)
+
+    let annee =new Date()
+
+    annee = dateJour.getFullYear();
+
+    var dateAnni = new Date(chaineDate); // récupérer la date d'anni
+
+    console.log("dateAnni : " + dateAnni);
+
+    let diff = dateAnni.getTime() - dateJour.getTime();
+
+    if (dateAnni.getFullYear() == dateJour.getFullYear()) {
+
+        diff = Math.ceil(diff / (1000 * 3600 * 24));
+
+    }
+
+    else if(dateAnni.getFullYear() < dateJour.getFullYear()) {
+
+        dateJour = new Date();
+
+        let enCours = new Date()
+
+        enCours = dateAnni.setFullYear(dateJour.getFullYear()+1);
+
+        diff = dateAnni.getTime() - dateJour.getTime();
+
+        diff = Math.ceil(diff / (1000 * 3600 * 24));
+
+    }
+
+    else{
+
+            dateJour = new Date();
+
+            let enCours = new Date()
+
+            enCours = dateAnni.setFullYear(dateJour.getFullYear());
+
+            diff = dateAnni.getTime() - dateJour.getTime();
+
+            diff = Math.ceil(diff / (1000 * 3600 * 24));
+
+    }
+
+    return diff;
+
 }
 
 */
