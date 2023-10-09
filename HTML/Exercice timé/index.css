@@ -1,0 +1,29 @@
+body{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 800px;
+    border-style: solid;
+    border-color: blue;
+}
+
+
+
+div{
+    margin-top: 5px;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+
+
+.bouton{
+    background-color: gray;
+}
+
+
+
+.cadre{
+    border-color: blue;
+}
