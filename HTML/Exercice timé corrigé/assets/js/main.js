@@ -65,29 +65,29 @@ function statutRetraite(){
     }
 
     else{
-        repComplete = `Bonjour ${prenom.value}, votre âge est : ${age.value}.`;
+        repComplete = `Bonjour <span>${prenom.value}</span>, votre âge est : <span>${age.value}</span>.`;
         reponse.innerHTML = repComplete;
 
         
         if(estMajeur()){
-            repComplete += `<p>Vous êtes majeur.</p>`;
+            repComplete += `<p>Vous êtes <span>majeur</span>.</p>`;
 
             reponse.innerHTML=`${repComplete}`;
         }
         
         else{
-            repComplete +="<p>Vous êtes mineur.</p>";
+            repComplete +="<p>Vous êtes <span>mineur</span>.</p>";
             reponse.innerHTML=`${repComplete}`;
         }
         if(age.value < ageRetraite){
             let rest = ageRetraite - age.value;
-            repComplete += `<p>Il vous reste ${rest} année(s) avant la retraite.</p>`;
+            repComplete += `<p>Il vous reste <span>${rest}</span> année(s) avant la retraite.</p>`;
             reponse.innerHTML=`${repComplete}`;
         }
         
         else if(age.value > ageRetraite){
             let dif = age.value - ageRetraite
-            repComplete += `<p>Vous êtes à la retraite depuis ${dif} année(s).</p>`;
+            repComplete += `<p>Vous êtes à la retraite depuis <span>${dif}</span> année(s).</p>`;
             reponse.innerHTML=`${repComplete}`;
         }
     

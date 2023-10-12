@@ -12,3 +12,8 @@ body{
 .cadre{
     border-color: blue;
 }
+
+span{
+    color: blue;
+    font-weight: bold;
+}
