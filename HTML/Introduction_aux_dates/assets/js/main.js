@@ -11,11 +11,32 @@ const divResultat = document.getElementById("resultatCalculer")
     if (!(_date instanceof Date)){
         throw new Error("La date n'est pas valide");
     }
-
-    dateAuj = new Date();
+    
+    let dateAuj = new Date();
 
     return dateAuj > _date;
 }
 
-let maDate = new Date("2023-09-01");
-console.log(estPassée(maDate));
+function diffDate(_dateDiff){
+    if (!(_dateDiff instanceof Date)){
+        throw new Error("La date n'est pas valide");
+    }
+    
+    let dateAuj = new Date();
+
+    let diffDates = dateAuj - _dateDiff;
+
+    return parseInt(diffDates / 3600 / 60 / 60 / 24 / 365);
+    
+}
+
+btnCalculer.addEventListener("click", () => {
+    let dateNaissance = new Date(inputDateNaissance.value);
+
+    if(estPassée(dateNaissance)){
+        divResultat.innerHTML = `Vous êtes né le ${dateNaissance.toLocaleDateString("fr")} à ${dateNaissance.toLocaleTimeString("fr")}.`;
+    }
+    else{
+        divResultat.innerHTML = "La date n'est pas passée";
+    }
+})
