@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetière</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/Cafetiere/assets/js/main.js" type="module"></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <h1>Produit : {{ produit }}</h1>
+        
+        <ul>
+            <li>
+                Prix HT :
+                <input type="number" v-model="prixHT">
+            </li>
+            <li>
+                Taxe :
+                <input type="number" v-model="taxe">
+                %
+            </li>
+            <li>Prix TTC : {{ prixTTC }}</li>
+            <li>Prix Arrondi : {{ prixArrondi }}</li>
+            <button v-on:click="maFonction">Bouton</button>
+        </ul>
+
+    </div>
+
+</body>
+</html>
