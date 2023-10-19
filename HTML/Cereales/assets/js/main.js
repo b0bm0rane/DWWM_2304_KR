@@ -1,0 +1,1 @@
+const apiUrl = "https://arfp.github.io/tp/web/vuejs/10-cereals/cereals.json";
