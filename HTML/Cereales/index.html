@@ -4,74 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Céréales</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css"></link>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/main.js" type="module"></script>
+    
 </head>
 <body>
 
     <header>
 
-        <h1>Cereals</h1>
-        
-        <fieldset id="rechercher">
-            <legend>Rechercher</legend>
-            <input type="search" name="recherche" id="recherche" value="Nom du céréale">
-        </fieldset>
-        
-        <fieldset id="filtrer">
-            <legend>Filtrer</legend>
+            <h1>Cereals</h1>
             
-            <fieldset id="nutriscore">
-                <legend>Nutriscore</legend>
-                <label for="a">A</label>
-                <input type="checkbox" name="A" id="a">
-                <label for="b">B</label>
-                <input type="checkbox" name="B" id="b">
-                <label for="c">C</label>
-                <input type="checkbox" name="C" id="c">
-                <label for="d">D</label>
-                <input type="checkbox" name="D" id="d">
-                <label for="e">E</label>
-                <input type="checkbox" name="E" id="e">
+            <fieldset id="rechercher">
+                <legend>Rechercher</legend>
+                <input type="search" name="recherche" id="recherche" value="Nom du céréale">
             </fieldset>
             
-            <fieldset id="categorie">
-                <legend>Catégorie</legend>
-                <select name="cat" id="cat">
-                    <option value="tous">Tous</option>
-                    <option value="sucre">Sans sucre</option>
-                    <option value="sel">Pauvre en sel</option>
-                    <option value="boost">Boost</option>
-                </select>
+            <fieldset id="filtrer">
+                <legend>Filtrer</legend>
+                
+                <fieldset id="nutriscore">
+                    <legend>Nutriscore</legend>
+                    <label for="a">A</label>
+                    <input type="checkbox" name="A" id="a">
+                    <label for="b">B</label>
+                    <input type="checkbox" name="B" id="b">
+                    <label for="c">C</label>
+                    <input type="checkbox" name="C" id="c">
+                    <label for="d">D</label>
+                    <input type="checkbox" name="D" id="d">
+                    <label for="e">E</label>
+                    <input type="checkbox" name="E" id="e">
+                </fieldset>
+                
+                <fieldset id="categorie">
+                    <legend>Catégorie</legend>
+                    <select name="cat" id="cat">
+                        <option value="tous">Tous</option>
+                        <option value="sucre">Sans sucre</option>
+                        <option value="sel">Pauvre en sel</option>
+                        <option value="boost">Boost</option>
+                    </select>
+                </fieldset>
+            
             </fieldset>
         
-        </fieldset>
-    
-    </header>
+        </header>
 
-    <table>
-        
-        <tbody>
+        <table>
             
-            <tr id="titres">
-                <td>ID</td>
-                <td>NOM</td>
-                <td>CALORIES</td>
-                <td>PROTEINES</td>
-                <td>SEL</td>
-                <td>FIBRES</td>
-                <td>GLUCIDES</td>
-                <td>SUCRE</td>
-                <td>POTASSIUM</td>
-                <td>VITAMINES</td>
-                <td>EVALUATION</td>
-                <td>NS</td>
-                <td>DEL</td>
-            </tr>
+            <tbody>
+                
+                <tr id="titres">
+                    <td>ID</td>
+                    <td>NOM</td>
+                    <td>CALORIES</td>
+                    <td>PROTEINES</td>
+                    <td>SEL</td>
+                    <td>FIBRES</td>
+                    <td>GLUCIDES</td>
+                    <td>SUCRE</td>
+                    <td>POTASSIUM</td>
+                    <td>VITAMINES</td>
+                    <td>EVALUATION</td>
+                    <td>NS</td>
+                    <td>DEL</td>
+                </tr>
+            
+            </tbody>
         
-        </tbody>
-    
-    </table>
+        </table>
 
 </body>
 </html>
