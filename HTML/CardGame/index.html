@@ -10,11 +10,51 @@
     
 </head>
 <body>
-
-    <div id="app">
+    <!--<div id="app">
         <input type="text" v-model="valeurInput"> {{ valeurInput }}
         <button v-on:click="clickBouton">Valider</button>
+        <p v-html="message"></p>
         {{ message }}
+    </div>-->
+
+    <div id="app">
+        <h1>Jeu de cartes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Level</th>
+                    <th>Description</th>
+                    <th>Power</th>
+                    <th>Attack</th>
+                    <th>Armor</th>
+                    <th>Damage</th>
+                    <th>Mitigation</th>
+                    <th>Played</th>
+                    <th>Victory</th>
+                    <th>Defeat</th>
+                    <th>Draw</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="card of cards">
+                    <td >{{ card.id }}</td>
+                    <td>{{ card.name }}</td>
+                    <td>{{ card.level }}</td>
+                    <td>{{ card.description }}</td>
+                    <td>{{ card.power }}</td>
+                    <td>{{ card.attack }}</td>
+                    <td>{{ card.armor }}</td>
+                    <td>{{ card.damage }}</td>
+                    <td>{{ card.mitigation }}</td>
+                    <td>{{ card.played }}</td>
+                    <td>{{ card.victory }}</td>
+                    <td>{{ card.defeat }}</td>
+                    <td>{{ card.draw }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
