@@ -1,0 +1,12 @@
+#colonnes{
+    background-color: rgb(184, 184, 184);
+}
+
+table{
+    border: solid;
+}
+
+body tr td{
+    border-top: solid 1px;
+    padding: 0;
+}
