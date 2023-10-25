@@ -10,6 +10,7 @@ const cardGameApp = {
             cards: []
         }
     },
+
     async mounted() {
         let json = await Db.fetchJson(apiUrl); // await nécessaire car fonction asynchrone
 
@@ -32,6 +33,9 @@ const cardGameApp = {
 
         console.log(this.cards);
     },
+
+    computed: {},
+
     methods: {
 
     }
