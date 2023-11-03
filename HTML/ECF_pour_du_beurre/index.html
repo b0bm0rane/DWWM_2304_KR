@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassGrad</title>
+    <link rel="stylesheet" href="./assets/css/style.css"></link>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/main.js" type="module"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Résultat de l'évaluation</h1>
+        <table>
+            <thead>
+                <tr id="colonnes">
+                    <th>Nom</th>
+                    <!--<th>Prénom</th>-->
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="student of students">
+                    <td>{{ student.fullname }}</td>
+                    <!--<td>{{  }}</td>-->
+                    <td>{{ student.grade }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
