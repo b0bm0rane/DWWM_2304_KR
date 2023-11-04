@@ -1,7 +1,7 @@
 import { Db } from "./Db.js";
 import { Student } from "./Student.js";
 
-const apiUrl = "./eval.json";
+const apiUrl = "HTML\ECF_pour_du_beurre\assets\json\eval.json";
 const { createApp } = Vue;
 
 const classGradApp = {
@@ -17,7 +17,7 @@ const classGradApp = {
             let s = new Student(item);
             this.students.push(s);
         }
-        console.log(this.students);
+        // console.log(this.students);
     },
     computed: {},
 

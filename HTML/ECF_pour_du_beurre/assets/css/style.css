@@ -6,4 +6,7 @@
     --color5: #6E7799;
     --color6: #C490D1;
     }
-    
+
+table{
+    border: solid;
+}
