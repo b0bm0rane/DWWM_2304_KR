@@ -13,16 +13,16 @@
         <h1>Résultat de l'évaluation</h1>
         <table>
             <thead>
-                <tr id="colonnes">
+                <tr>
                     <th>Nom</th>
-                    <!--<th>Prénom</th>-->
+                    <th>Prénom</th>
                     <th>Note</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="student of students">
-                    <td>{{ student.fullname }}</td>
-                    <!--<td>{{  }}</td>-->
+                    <td>{{ student.firstName }}</td>
+                    <td>{{ student.lastName }}</td>
                     <td>{{ student.grade }}</td>
                 </tr>
             </tbody>
