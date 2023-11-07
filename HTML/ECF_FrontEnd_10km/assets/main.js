@@ -8,7 +8,7 @@ const app = {
         
     data() {
         return {
-            participants: [],
+            participants: []
         }
     }, 
 
