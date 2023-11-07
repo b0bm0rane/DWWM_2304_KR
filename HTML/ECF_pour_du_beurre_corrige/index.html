@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/JS/main.js" type="module"></script>
+</head>
+<body>
+    <main id="app">
+        <h1>Résultat de l'évaluation</h1>
+        <fieldset>
+            <legend>Ajouter une note</legend>
+            <div>
+                <label for="studentName">Nom Prénom :</label>
+                <input id="studentName" v-model="studentName"> 
+            </div>
+            <div>
+                <label for="studentGrade">Note :</label>
+                <input id="studentGrade" type="number" min="0" max="20" v-model="studentGrade"> 
+            </div>
+            <button @click="addStudent">Ajouter</button>
+        </fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Note</th>
+                    <th>Obtenu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="student of students">
+                    <td>{{ student.lastName }}</td>
+                    <td>{{ student.firstName }}</td>
+                    <td class="grade">{{ student.grade }}</td>
+                    <td v-if="student.grade >= minGrade">Oui</td>
+                    <td v-else>Non</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <li>Nombre d'étudiants : {{ nbStudents }}</li>
+            <li>Moyenne de la classe : {{ avgGrade }}</li>
+            <li>Nombre d'étudiants au dessus de la moyenne : {{ nbStudentsAboveAvg }}</li>
+            <li>Note éliminatoire: {{ minGrade }}</li>
+        </ul>
+    </main>
+</body>
+</html>

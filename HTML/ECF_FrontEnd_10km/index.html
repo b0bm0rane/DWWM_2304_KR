@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/main.js" type="module"></script>
+</head>
+<body>
+    <main id="app">
+        <h1>Résultat de la course</h1>
+        <ul>
+            <li>{{ nbParticipants }} participants</li>
+            <li>Gagnant : {{  }}</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pays</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Temps final</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for = "participant of participants">
+                    <td>{{ participant.pays }}</td>
+                    <td>{{ participant.nomF }}</td>
+                    <td>{{ participant.prenom }}</td>
+                    <td>{{ participant.temps }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

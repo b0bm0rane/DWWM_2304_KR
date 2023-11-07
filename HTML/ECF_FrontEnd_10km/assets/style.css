@@ -1,0 +1,17 @@
+:root {
+    --base-1: #E9FFF9;
+    --base-2: #1D3354;
+    --base-3: #467599;
+    --base-4: #467599;
+    --base-5: #9ED8DB;
+    --base-6: #E9FFF9;
+}
+/*
+body {
+    background-color: var(--base-6);
+}
+
+main {
+    border: solid;
+}
+*/
