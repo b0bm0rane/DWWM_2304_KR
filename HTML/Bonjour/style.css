@@ -1,0 +1,23 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid blue 1px;
+    width: 800px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+input, button{
+    border-color: blue;
+    height: 30px;
+}
+
+hr{
+    height: 3px;
+    background-color: black;
+}
+
+span{
+    color: blue;
+    font-weight: bold;
+}

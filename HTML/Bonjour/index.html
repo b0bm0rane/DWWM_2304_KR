@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonjour</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" type="module"></script>
 </head>
 <body>
     <h1>Saisissez un prénom et un âge</h1>
 
-    <label for="prenom">Prénom</label>
-    <input type="text" name="prenom" id="prenom">
+    <form action="" method="get">
+        <label for="prenom">Prénom : </label>
+        <input type="text" name="prenom" id="inputPrenom">
+    
+        <label for="age">Âge : </label>
+        <input type="text" name="age" id="inputAge" placeholder="0">
+    
+        <button type="button" id="btnValider">Valider</button>
+        <button type="reset">Vider</button>
+    </form>
 
-    <label for="age">Âge</label>
-    <input type="text" name="age" id="age">
+    <hr>
+
+    <div id="reponse">Compléter/corriger le formulaire.</div>
+
 </body>
 </html>
