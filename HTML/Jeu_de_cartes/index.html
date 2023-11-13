@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de cartes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/main.js" type="module"></script>
+
+</head>
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>level</th>
+                    <th>description</th>
+                    <th>power</th>
+                    <th>attack</th>
+                    <th>armor</th>
+                    <th>damage</th>
+                    <th>mitigation</th>
+                    <th>played</th>
+                    <th>victory</th>
+                    <th>defeat</th>
+                    <th>draw</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="carte of cartes">
+                    <td>{{ carte.id }}</td>
+                    <td>{{ carte.name }}</td>
+                    <td>{{ carte.level }}</td>
+                    <td>{{ carte.decription }}</td>
+                    <td>{{ carte.power }}</td>
+                    <td>{{ carte.attack }}</td>
+                    <td>{{ carte.armor }}</td>
+                    <td>{{ carte.damage }}</td>
+                    <td>{{ carte.mitigation }}</td>
+                    <td>{{ carte.played }}</td>
+                    <td>{{ carte.victory }}</td>
+                    <td>{{ carte.defeat }}</td>
+                    <td>{{ carte.draw }}</td>
+                </tr>
+            </tbody>
+        </table>    
+        <p v-if="cartes.length > 0">Nom de la carte la plus forte en attaque : {{ attackMax.name }}, attaque : {{ attackMax.attack}}</p>
+        <p v-if="cartes.length > 0"> Nom de la carte avec la plus forte en armure : {{ armorMax.name }}, armure : {{ armorMax.armor}} </p>
+        <p v-if="cartes.length > 0">Nom de la carte la plus jouée : {{ playedMax.name }}, nombre de victoires : {{ playedMax.victory }}</p>
+        <p v-if="cartes.length > 0">Nom de la carte ayant le plus grand nombre de victoires : {{ victoryMax.name }}, nombre de parties : {{ victoryMax.played }}, nombre de victoires : {{ victoryMax.victory }}</p>
+    </div>
+</body>
+</html>

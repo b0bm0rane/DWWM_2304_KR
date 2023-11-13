@@ -1,0 +1,31 @@
+table{
+    border: solid black 3px;
+    border-spacing: 0;
+    width: 800px;
+}
+
+thead tr{
+    background-color: rgb(214, 214, 214);
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(231, 227, 227);
+}
+
+th{
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;;
+}
+
+td{
+    border-bottom: solid black 1px;
+    text-align: center;
+}
+
+p{
+    width: 800px;
+    margin-top: 5px;
+    text-align: center;
+    background-color: bisque;
+    border: solid black 1px;
+}
