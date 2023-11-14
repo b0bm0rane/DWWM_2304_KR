@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Céréales</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/main.js" type="module"></script>
+</head>
+<body>
+    <header>
+
+        <h1>Cereals</h1>
+        
+        <fieldset>
+            <legend>Rechercher</legend>
+            <input type="search" name="searchCereale" id="searchCereale" placeholder="Nom du céréale">            
+        </fieldset>
+        
+        <fieldset>
+            <legend>Filtrer</legend>            
+            <fieldset>
+                <legend>Nutriscore</legend>
+
+                <label for="checkA">A</label>
+                <input type="checkbox" name="checkA" id="checkA">
+                
+                <label for="checkB">B</label>
+                <input type="checkbox" name="checkB" id="checkB">
+                
+                <label for="checkC">C</label>
+                <input type="checkbox" name="checkC" id="checkC">
+                
+                <label for="checkD">D</label>
+                <input type="checkbox" name="checkD" id="checkD">
+                
+                <label for="checkE">E</label>
+                <input type="checkbox" name="checkE" id="checkE">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Catégorie</legend>
+                <select name="categorie" id="categorie">
+                    <option value="tous">Tous</option>
+                    <option value="sansSucre">Sans sucre</option>
+                    <option value="pauvreSel">Pauvre en Sel</option>
+                    <option value="boost">Boost</option>
+                </select>
+            </fieldset>
+        </fieldset>
+    
+    </header>
+        
+    <div id="app">
+
+        <table>
+            <thead>
+                <tr>
+                    <th id="id" @click="trier">ID</th>
+                    <th id="nom" @click="trier">NOM</th>
+                    <th id="calories" @click="trier">CALORIES</th>
+                    <th>PROTEÏNES</th>
+                    <th>SEL</th>
+                    <th>FIBRES</th>
+                    <th>GLUCIDES</th>
+                    <th>SUCRE</th>
+                    <th>POTASSIUM</th>
+                    <th>VITAMINES</th>
+                    <th>ÉVALUATION</th>
+                    <th>NS</th>
+                    <th>DEL</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr v-for="cereale of cereales">
+                    <td>{{ cereale.id }}</td>
+                    <td>{{ cereale.name }}</td>
+                    <td>{{ cereale.calories }}</td>
+                    <td>{{ cereale.protein }}</td>
+                    <td>{{ cereale.sodium }}</td>
+                    <td>{{ cereale.fiber }}</td>
+                    <td>{{ cereale.carbo }}</td>
+                    <td>{{ cereale.sugars }}</td>
+                    <td>{{ cereale.potass }}</td>
+                    <td>{{ cereale.vitamins }}</td>
+                    <td>{{ cereale.rating }}</td>
+                    <td>{{  }}</td>
+                    <td>❌</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
