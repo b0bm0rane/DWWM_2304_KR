@@ -1,0 +1,23 @@
+[
+    { "team1": "Annecy",        "team2": "Toulon",       "score": ["1-2", "4-1"] },
+    { "team1": "Narbonne",      "team2": "Mulhouse",     "score": ["2-2", "2-3"] },
+    { "team1": "Valenciennes",  "team2": "Agen",         "score": ["3-1", "0-5"] },
+
+    { "team1": "Narbonne",      "team2": "Annecy",       "score": ["4-0", "3-4"] },
+    { "team1": "Agen",          "team2": "Toulon",       "score": ["3-2", "3-2"] },
+    { "team1": "Valenciennes",  "team2": "Mulhouse",     "score": ["1-3", "2-3"] },
+
+    { "team1": "Annecy",        "team2": "Mulhouse",     "score": ["2-1", "1-1"] },
+    { "team1": "Toulon",        "team2": "Valenciennes", "score": ["0-0", "3-3"] },
+    { "team1": "Narbonne",      "team2": "Agen",         "score": ["1-2", "0-1"] },
+
+    { "team1": "Annecy",        "team2": "Valenciennes", "score": ["0-2","1-3"] },
+    { "team1": "Toulon",        "team2": "Narbonne",     "score": ["2-1","0-2"] },
+    { "team1": "Mulhouse",      "team2": "Agen",         "score": ["2-1","2-4"] },
+
+    { "team1": "Agen",          "team2": "Annecy",       "score": ["5-2", "1-4"] },
+    { "team1": "Toulon",        "team2": "Mulhouse",     "score": ["3-4", "3-1"] },
+    { "team1": "Narbonne",      "team2": "Valenciennes", "score": ["3-3", "3-4"] }
+]
+
+

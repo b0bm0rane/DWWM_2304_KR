@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats du tournoi de Football</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/main.js" type="module"></script>
+</head>
+<body>
+    <div id="appFootball">
+        
+        <h1>Tournoi de Football</h1>
+        <div id="calculs">
+
+            <p id="nbEquipes">{{ this.listeEquipes.length }} équipes</p>
+
+            <p id="nbMatchs">{{ this.equipes.length }} matchs joués</p>
+
+        </div>
+        
+        <h2>Matchs joués</h2>
+
+        <label for="filtrer">Filtrer : </label>
+        <input type="search" name="filtrer" id="filtrer" placeholder="Nom d'équipe" v-model="search" @input="filtrerTeam1">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Équipe 1</th>
+                    <th>Équipe 2</th>
+                    <th>Score 1</th>
+                    <th>Gagnant 1</th>
+                    <th>Score 2</th>
+                    <th>Gagnant 2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr v-for="equipe of equipes">
+                    <td>{{ equipe.team1 }}</td>
+                    <td>{{ equipe.team2 }}</td>
+                    <td>{{ equipe.score[0] }}</td>
+
+                    <td> gagnant1 </td>
+                    <!-- <td v-if="equipe.score[0] > 1">{{ equipe.team1 }}</td>
+                    <td v-else-if="equipe.score[0] = 0">{{ égalité }}</td>
+                    <td v-else>{{ equipe.team2 }}</td> -->
+
+                    <td>{{ equipe.score[1] }}</td>
+
+                    <td> gagnant2 </td>
+                    <!-- <td v-if="equipe.score[0] > 1">{{ equipe.team1 }}</td>
+                    <td v-else-if="equipe.score[0] = 0">{{ égalité }}</td>
+                    <td v-else>{{ equipe.team2 }}</td> -->
+
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

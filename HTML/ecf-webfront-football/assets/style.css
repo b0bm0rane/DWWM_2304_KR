@@ -1,0 +1,96 @@
+:root {
+    --base-bg: #2D3142;
+    --base-link: #BFC0C0;
+    --base-txt: #EF8354;
+    --base-btn: #4F5D75;
+    --base-border: #4F5D75;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--base-bg);
+    width: 1000px;
+    border: solid var(--base-border);
+    padding-left: 10px;
+    padding-bottom: 40px;
+}
+
+
+
+h1{
+    margin-bottom: 0;
+}
+
+
+
+h2{
+    margin-top: 0;
+}
+
+
+
+h1, h2{
+    color: var(--base-link);
+}
+
+
+
+#calculs{
+    display: flex;
+}
+
+
+
+p{
+    background-color: var(--base-link);
+    height: 25px;
+}
+
+
+
+#nbEquipes{
+    width: 110px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+
+
+#nbMatchs{
+    width: 170px;
+    text-align: center;
+    margin-left: 3px;
+}
+
+
+
+label{
+    color: var(--base-txt);
+    margin-right: 120px;
+}
+
+
+
+input{
+    color: var(--base-link);
+    background-color: var(--base-btn);
+    width: 150px;
+    height: 25px;
+}
+
+
+
+table{
+    color: var(--base-link);
+    background-color: var(--base-btn);
+    margin-top: 30px;
+    border-spacing: 10px;
+    margin-left: 10px;
+    width: 700px;
+}
