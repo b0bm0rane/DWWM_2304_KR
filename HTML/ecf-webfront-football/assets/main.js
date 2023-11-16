@@ -22,8 +22,7 @@ const appFootball = {
             this.equipes.push(e);
         }
 
-        this.listeEquipes = Array.from(new Set(this.equipes));
-
+        this.listeEquipes = this.equipes.map(match => match.team1)
         console.log(this.listeEquipes);
  
     },
@@ -32,12 +31,11 @@ const appFootball = {
     },
     methods: {
         filtrerTeam1() {
-            this.equipes = this.listeEquipes.filter(equipe => equipe.team1.toLowerCase().includes(this.search.toLowerCase().trim()));
+            this.equipes = this.listeEquipes.filter(equipe => equipe.team1.toLowerCase().includes(this.search.toLowerCase().trim())
+            ||
+            equipe.team2.toLowerCase().includes(this.search.toLowerCase().trim())
+            );
         }
-
-        // filtrerTeam2() {
-        //     this.equipes = this.listeEquipes.filter(equipe => equipe.team2.toLowerCase().includes(this.search.toLowerCase().trim()));
-        // }
 
     }
 }
